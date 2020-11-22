@@ -14,16 +14,16 @@ Features currently available:
 
 ##  MacOS Install (Using Xcode 11.6 or later)
 1.  On the "Welcome" window, click "Clone an Existing Project".
-2.  This repository is located at the URL: "https://github.com/mc97-stack/IJTB-m2UY-7iPC-D0FN.git".
+2.  This repository is located at the URL: "https://github.com/mc97-stack/QL83-49EH-0NcW-eHV6".
 3.  After allowing Xcode 11.6 to download and build repository, compile the project.
 4.  Locate project product in finder to run program within terminal.
 
 ##  Windows Install (Using Visual Studio 2019) (Currently requires manual repository rebuilding)
 1.  Ensure that "Mobile Development with C++" workload is installed in "Visual Studio Installer".
 2.  On the "Welcome" window, click "Clone GitHub Repository".
-3.  This repository is located at the URL: "https://github.com/mc97-stack/IJTB-m2UY-7iPC-D0FN.git".
+3.  This repository is located at the URL: "https://github.com/mc97-stack/QL83-49EH-0NcW-eHV6".
 4.  After allowing Visual Studio 2019 to download repository, compile the project.
 5.  Locate the compiled project in file explorer with either command prompt or windows powershell.
 
 ##  Known bugs
-Please refer to https://github.com/mc97-stack/IJTB-m2UY-7iPC-D0FN/issues for updates on known bugs and to report a bug.
+Please refer to https://github.com/mc97-stack/QL83-49EH-0NcW-eHV6/issues for updates on known bugs and to report a bug.
