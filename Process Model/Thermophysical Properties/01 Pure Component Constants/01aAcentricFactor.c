@@ -1,5 +1,5 @@
 //
-//  02AcentricFactor.c
+//  01aAcentricFactor.c
 //  Process Model (Cross-Platform)
 //
 //  Created by Matthew Cheung on 02/11/2020.
@@ -30,7 +30,7 @@
 //Custom Header Files
 #include "System.h"
 #include "01PureComponent.h"
-#include "02AcentricFactor.h"
+#include "01aAcentricFactor.h"
 
 /// MARK: SUBROUTINE DEFINITIONS
 #define maxstrlen 128
