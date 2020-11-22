@@ -1,6 +1,6 @@
 //
 //  ThermophysicalProperties.h
-//  Process Model (Cross-Platform)
+//  Process Model
 //
 //  Created by Matthew Cheung on 01/11/2020.
 //  Copyright © 2020 Matthew Cheung. All rights reserved.
