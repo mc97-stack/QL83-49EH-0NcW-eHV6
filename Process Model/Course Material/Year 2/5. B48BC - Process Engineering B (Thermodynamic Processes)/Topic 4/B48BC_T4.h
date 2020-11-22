@@ -1,6 +1,6 @@
 //
 //  B48BC_T4.h
-//  Process Model (Cross-Platform)
+//  Process Model
 //
 //  Created by Matthew Cheung on 30/10/2020.
 //  Copyright © 2020 Matthew Cheung. All rights reserved.

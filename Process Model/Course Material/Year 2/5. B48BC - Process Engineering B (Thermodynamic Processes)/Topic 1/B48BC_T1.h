@@ -1,6 +1,6 @@
 //
 //  B48BC_T1.h
-//  Process Model (Cross)
+//  Process Model
 //
 //  Created by Matthew Cheung on 18/08/2020.
 //  Copyright © 2020 Matthew Cheung. All rights reserved.
