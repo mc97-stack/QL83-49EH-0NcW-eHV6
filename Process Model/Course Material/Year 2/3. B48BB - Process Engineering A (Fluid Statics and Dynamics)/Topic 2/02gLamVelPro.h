@@ -1,5 +1,5 @@
 //
-//  02g1LamVelPro.h
+//  02gLamVelPro.h
 //  Process Model
 //
 //  Created by Matthew Cheung on 21/09/2020.

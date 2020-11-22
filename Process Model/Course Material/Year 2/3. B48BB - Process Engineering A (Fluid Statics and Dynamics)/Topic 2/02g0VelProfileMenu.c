@@ -25,9 +25,8 @@
 //  Custom header files
 #include "System.h"
 #include "B48BB_T2.h"
-#include "02g0VelProfileMenu.h"
-#include "02g1LamVelPro.h"
-#include "02g2TurVelPro.h"
+#include "02gLamVelPro.h"
+#include "02gTurVelPro.h"
 
 #define maxstrlen 128
 
