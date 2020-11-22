@@ -1,6 +1,6 @@
 //
 //  02aMassCon.c
-//  Process Model (Cross-Platform)
+//  Process Model
 //
 //  Created by Matthew Cheung on 26/06/2020.
 //  Copyright © 2020 Matthew Cheung. All rights reserved.

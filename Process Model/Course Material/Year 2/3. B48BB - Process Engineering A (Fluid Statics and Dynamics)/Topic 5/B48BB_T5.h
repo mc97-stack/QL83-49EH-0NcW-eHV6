@@ -1,6 +1,6 @@
 //
 //  B48BB_T5.h
-//  Process Model (Cross-Platform)
+//  Process Model
 //
 //  Created by Matthew Cheung on 19/08/2020.
 //  Copyright © 2020 Matthew Cheung. All rights reserved.

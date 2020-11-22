@@ -1,6 +1,6 @@
 //
 //  04bPumpSizing.c
-//  Process Model (Cross-Platform)
+//  Process Model
 //
 //  Created by Matthew Cheung on 07/07/2020.
 //  Copyright © 2020 Matthew Cheung. All rights reserved.
