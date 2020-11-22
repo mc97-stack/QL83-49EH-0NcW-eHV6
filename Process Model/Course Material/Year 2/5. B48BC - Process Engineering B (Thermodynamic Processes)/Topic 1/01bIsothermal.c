@@ -385,7 +385,7 @@ void Isothermal()
         whilmethod = 1;
         while(whilmethod == 1)
         {
-            printf("Please select from the following calculation methods:\n1. Pressure\n2. Volume\n");
+            printf("Please select from the following calculation methods:\n1. Volume\n2. Pressure\n");
             printf("Selection [1 - 2]: ");
             fgets(input, sizeof(input), stdin);
             switch(input[0])
@@ -394,14 +394,14 @@ void Isothermal()
                 case 'P':
                 case 'p':
                     //code
-                    method  = 2;
+                    method  = 1;
                     whilmethod = 0;
                     break;
                 case '2':
                 case 'V':
                 case 'v':
                     //code
-                    method = 1;
+                    method = 2;
                     whilmethod = 0;
                     break;
                 case 'Q':
@@ -423,6 +423,15 @@ void Isothermal()
             clock_gettime(CLOCK_MONOTONIC, &start);
             
             *profile = IsotProfile(method, n, T, P1, P2, V1, V2);
+            
+            if(method == 1){
+                P1 = profile->P[0];
+                P2 = profile->P[249];
+            }
+            if(method == 2){
+                V1 = profile->V[0];
+                V2 = profile->V[249];
+            }
             
             clock_getres(CLOCK_MONOTONIC, &end);
             clock_gettime(CLOCK_MONOTONIC, &end);
