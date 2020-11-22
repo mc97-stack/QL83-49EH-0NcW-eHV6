@@ -203,7 +203,6 @@
 		E82057AE256ADEE800DA25F0 /* B48BB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = B48BB.c; sourceTree = "<group>"; };
 		E82057AF256ADEE800DA25F0 /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
 		E82057B1256ADEE800DA25F0 /* Year1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Year1.c; sourceTree = "<group>"; };
-		E82057F3256AE6D000DA25F0 /* Process Model.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Process Model.entitlements"; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -523,7 +522,6 @@
 		E86E6CAB256ACE9D004B9493 /* Process Model */ = {
 			isa = PBXGroup;
 			children = (
-				E82057F3256AE6D000DA25F0 /* Process Model.entitlements */,
 				E8205723256ADEE700DA25F0 /* License.c */,
 				E86E6CAC256ACE9D004B9493 /* main.c */,
 				E8205722256ADEE700DA25F0 /* main.h */,
