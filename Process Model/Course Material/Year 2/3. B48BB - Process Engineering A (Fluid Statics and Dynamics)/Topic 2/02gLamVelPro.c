@@ -134,8 +134,8 @@ void LamVelProDisplay(double dP, double L, double d, double mu, int rows, LamVel
     for(int i = 0; i < rows; ++i)
     {
         printf("%.3f\t", 1000*profile.r[i]);
-        printf("%.3f\t", profile.v_x[i]);
-        printf("%.3f\n", profile.ratio[i]);
+        printf("%.5f\t", profile.v_x[i]);
+        printf("%.5f\n", profile.ratio[i]);
     }
     fflush(stdout);
 }
@@ -205,8 +205,8 @@ void LamVelProWrite(double dP, double L, double d, double mu, int rows, LamVelPr
     for(int i = 0; i < rows; ++i)
     {
         fprintf(fp, "%.3f\t", 1000*profile.r[i]);
-        fprintf(fp, "%.3f\t", profile.v_x[i]);
-        fprintf(fp, "%.3f\n", profile.ratio[i]);
+        fprintf(fp, "%.5f\t", profile.v_x[i]);
+        fprintf(fp, "%.5f\n", profile.ratio[i]);
     }
     
     //  Close file
