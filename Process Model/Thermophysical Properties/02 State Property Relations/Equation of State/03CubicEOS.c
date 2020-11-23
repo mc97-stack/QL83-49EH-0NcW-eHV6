@@ -367,15 +367,6 @@ void CubicEOS(void)
         int control = 0;            // Variable used to control the number of individual isotherms generated.
         int eqn = 0;                // Variable used to control which equation of state is calculated. All equations is also an option.
         int ContCond = 0;           // Variable used to control whether the while loop generating the isotherm should be broken or not.
-        int VdWElems = 0;           // Variable used to store the total number of elements used to store the calculated data from the van der Waals equation of state.
-        int RKElems = 0;            // Variable used to store the total number of elements used to store the calculated data from the Redlich-Kwong equation of state.
-        int SRKElems = 0;           // Variable used to store the total number of elements used to store the calculated data from the Soave-Redlich-Kwong equation of state.
-        int PRElems = 0;            // Variable used to store the total number of elements used to store the calculated data from the Peng-Robinson equation of state.
-        
-        VdWElems = 4*1000;
-        RKElems = 4*1000;
-        SRKElems = 4*1000;
-        PRElems = 4*1000;
         
         double VdWa = 0.0;             // Repulsive term in the van der Waals equation of state.
         double VdWb = 0.0;             // Actual molecular volume term in the van der Waals equation of state.
@@ -385,22 +376,22 @@ void CubicEOS(void)
         double SRKb = 0.0;             // Actual molecular volume term in the van der Waals equation of state.
         double PRa = 0.0;              // Repulsive term in the van der Waals equation of state.
         double PRb = 0.0;              // Actual molecular volume term in the van der Waals equation of state.
-        EOSIsotherm *VdWEOSIsotherm = calloc(VdWElems, sizeof(double));
+        EOSIsotherm *VdWEOSIsotherm = calloc(1, sizeof(EOSIsotherm));
         if(VdWEOSIsotherm == NULL){
             printf("Calloc failed. Ending calculations\n");
             whilmain = 0;
         }
-        EOSIsotherm *RKEOSIsotherm = calloc(RKElems, sizeof(double));
+        EOSIsotherm *RKEOSIsotherm = calloc(1, sizeof(EOSIsotherm));
         if(RKEOSIsotherm == NULL){
             printf("Calloc failed. Ending calculations\n");
             whilmain = 0;
         }
-        EOSIsotherm *SRKEOSIsotherm = calloc(SRKElems, sizeof(double));
+        EOSIsotherm *SRKEOSIsotherm = calloc(1, sizeof(EOSIsotherm));
         if(SRKEOSIsotherm == NULL){
             printf("Calloc failed. Ending calculations\n");
             whilmain = 0;
         }
-        EOSIsotherm *PREOSIsotherm = calloc(PRElems, sizeof(double));
+        EOSIsotherm *PREOSIsotherm = calloc(1, sizeof(EOSIsotherm));
         if(PREOSIsotherm == NULL){
             printf("Calloc failed. Ending calculations\n");
             whilmain = 0;
