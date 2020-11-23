@@ -78,7 +78,7 @@ TurVelProf TurVelProCalculation(double vmax, double d, int *rows)
     
     TurVelProf profile = {0.0};
     
-    interval = 0.001;
+    interval = 0.00001;
     prad = d/2;
     
     *rows = ((prad)/ (interval)) + 1;
@@ -111,7 +111,7 @@ void TurVelProDisplay(double umax, double d, int rows, TurVelProf profile)
     
     printf("\tOutput parameters:\n");
     printf("r (mm)\tv_x (m/s)\tv_x/v_{max}\n");
-    for(int i = 0; i < ++rows; ++i)
+    for(int i = 0; i < rows; ++i)
     {
         printf("%.3f\t", 1000*profile.r[i]);
         printf("%.3f\t", profile.v_x[i]);
@@ -177,7 +177,7 @@ void TurVelProWrite(double umax, double d, int rows, TurVelProf profile)
     
     fprintf(fp, "\tOutput parameters:\n");
     fprintf(fp, "r (mm)\tv_x (m/s)\tv_x/v_{max}\n");
-    for(int i = 0; i < ++rows; ++i)
+    for(int i = 0; i < rows; ++i)
     {
         fprintf(fp, "%.3f\t", 1000*profile.r[i]);
         fprintf(fp, "%.3f\t", profile.v_x[i]);
@@ -283,6 +283,7 @@ void TurbulentVelPro()
         //  Writing to File
         TurVelProSwitch(2, vmax, d, rows, *profile);
         free(profile);
+        whilmain = 0;
     }
     fflush(stdout);
 }

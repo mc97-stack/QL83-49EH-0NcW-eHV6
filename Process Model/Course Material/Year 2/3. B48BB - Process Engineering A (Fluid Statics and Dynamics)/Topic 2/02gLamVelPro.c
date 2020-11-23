@@ -95,7 +95,7 @@ LamVelProf LamVelProfCalculation(double dP, double L, double d, double mu, int *
     
     LamVelProf profile = {0.0};
     
-    interval = 0.0001; // m
+    interval = 0.00001; // m
     
     frad = d/2;
     *rows = ((frad)/ (interval)) + 1; //Calculating number of rows for the profile results matrix
@@ -202,7 +202,7 @@ void LamVelProWrite(double dP, double L, double d, double mu, int rows, LamVelPr
     
     fprintf(fp, "\tOutput Parameters:\n");
     fprintf(fp, "r (mm)\tv_x (m/s)\tv_x/v_{max}\n");
-    for(int i = 0; i < ++rows; ++i)
+    for(int i = 0; i < rows; ++i)
     {
         fprintf(fp, "%.3f\t", 1000*profile.r[i]);
         fprintf(fp, "%.3f\t", profile.v_x[i]);
@@ -309,6 +309,7 @@ void LaminarVelPro()
         //  Writing to File
         LamVelProSwitch(2, dP, L, d, mu, rows, *profile);
         free(profile);
+        whilmain = 0;
     }
     fflush(stdout);
 }
