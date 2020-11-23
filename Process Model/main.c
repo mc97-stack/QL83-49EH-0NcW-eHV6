@@ -91,7 +91,7 @@ void ThermoProps()
         printf("The Properties of Gases && Liquids (4th Ed.) - Reid, Prausnitz and Poling.\n\n");
         printf("Thermophysical Properties\n\n");
         printf("Please make a selection from the following areas:\n");
-        printf("1. Pure component constants.\n");
+        printf("1. Acentric factor calculation\n");
         printf("2. P-V-T relations for pure component gas or liquid.\n");
         printf("3. Volumetric properties applied to mixtures.\n");
         printf("4. Thermodynamic properties.\n");

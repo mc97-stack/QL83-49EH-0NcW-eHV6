@@ -29,46 +29,5 @@
 
 void pureComponentConstants()
 {
-    char input[maxstrlen];
-    int control = 0;
-    
-    control = 1;
-    while(control == 1)
-    {
-        printf("Subroutines available:\n");
-        printf("1. Critical property estimation.\n");
-        printf("2. Acentric factor calculation.\n");
-        printf("3. Boiling and freezing point estimation.\n");
-        printf("Q. Exit menu.\n\n");
-        
-        printf("Selection [2]: ");
-        fgets(input, sizeof(input), stdin);
-        switch(input[0])
-        {
-            case '1':
-                //CriticalProperty();
-                printf("Bear with me, this is still being written...\n");
-                break;
-            case '2':
-                if(AcentricFactor() != 0.0)
-                {
-                    printf("AcentricFactor() success\n");
-                }else{
-                    printf("WARNING: AcentricFactor() == 0\n");
-                }
-                break;
-            case '3':
-                //BoilingFreezingPoint();
-                printf("Bear with me, this is still being written...\n");
-                break;
-            case '0':
-            case 'Q':
-            case 'q':
-                control = 0;
-                break;
-            default:
-                printf("Input not recognised. Please enter an integer value between 1 and 2");
-                break;
-        }
-    }
+    AcentricFactor();
 }
