@@ -177,6 +177,9 @@ T2CompProfile CompressorProfile(int method, double P1, double P2, double Vc, dou
 /// MARK: DISPLAY AND WRITE
 void CompresDisplay(double P1, double P2, double Vc, double V1, double V2, double T1, double T2, double n, double R, double alpha, T2CompProfile profile)
 {
+    char input[maxstrlen];
+    
+    int control = 0;        // Variable used to force character input.
     printf("_Reciprocating_Compressor_Results_\n");
     printf("\tInput parameters:\n");
     printf("Initial system pressure:\n");
@@ -210,18 +213,44 @@ void CompresDisplay(double P1, double P2, double Vc, double V1, double V2, doubl
     printf("Polytropic Index:\n");
     printf("alpha =\t%.3f\t[ ]\n\n", alpha);
     
-    printf("\tOutput parameters:\n");
-    
-    // Profile (Two Temperature columns (K and deg C))
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_S (kW)\n");
-    for(int i = 0; i < 512; ++i)
+    control = 1;
+    while(control == 1)
     {
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        printf("%f\t", profile.W_V[i]*0.001);
-        printf("%f\n", profile.W_S[i]*0.001);
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                // Profile (Two Temperature columns (K and deg C))
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_S (kW)\n");
+                for(int i = 0; i < 512; ++i)
+                {
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    printf("%f\t", profile.W_V[i]*0.001);
+                    printf("%f\n", profile.W_S[i]*0.001);
+                }
+                
+                control = 0;
+                break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+                break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }

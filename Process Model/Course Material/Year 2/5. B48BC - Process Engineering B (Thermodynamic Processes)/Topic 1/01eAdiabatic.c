@@ -242,7 +242,11 @@ T1ThermoProf AdiaProfile(int method, double P1, double P2, double V1, double V2,
 /// MARK: DISPLAY AND WRITE
 void AdiaProcDisplay(double P1, double P2, double V1, double V2, double T1, double T2, double n, double gamma, T1ThermoProf profile)
 {
+    char input[maxstrlen];
+    
     double total = 0.0;
+    
+    int control = 0;        // Variable used to force character input.
     
     printf("_Adiabatic_Process_Results_\n");
     printf("\tInput parameters:\n");
@@ -270,18 +274,44 @@ void AdiaProcDisplay(double P1, double P2, double V1, double V2, double T1, doub
     printf("Adiabatic Index:\n");
     printf("gamma =\t%.3f\t[ ]\n\n", gamma);
     
-    printf("\tOutput parameters:\n");
-    
-    // Profile (Two Temperature columns (K and deg C))
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\n");
-    for(int i = 0; i < 250; ++i){
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        printf("%f\t", profile.W_V[i]*0.001);
-        total += profile.W_V[i]*0.001;
-        printf("%f\n", total);
+    control = 1;
+    while(control == 1)
+    {
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                // Profile (Two Temperature columns (K and deg C))
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\n");
+                for(int i = 0; i < 250; ++i)
+                {
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    printf("%f\t", profile.W_V[i]*0.001);
+                    total += profile.W_V[i]*0.001;
+                    printf("%f\n", total);
+                }
+                control = 0;
+            break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+            break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }
@@ -465,7 +495,7 @@ void Adiabatic()
         whilmethod = 1;
         while(whilmethod == 1)
         {
-            printf("Please select from the following calculation methods:\n1. Pressure-Volume\n2. Pressure-Temperature\n");
+            printf("Please select from the following calculation methods:\n1. Volume change (w/ Pressure)\n2. Pressure change (w/ Temperature)\n");
             // Add the ability calculate the volume work from a pressure change
             printf("Selection [1 - 2]: ");
             fgets(input, sizeof(input), stdin);
