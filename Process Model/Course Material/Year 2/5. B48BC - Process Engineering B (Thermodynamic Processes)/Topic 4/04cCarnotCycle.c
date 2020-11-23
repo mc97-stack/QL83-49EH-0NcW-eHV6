@@ -249,7 +249,7 @@ void CarnotDisplay(double P1, double P2, double P3, double P4, double THot, doub
     printf("Thermal efficiency from reservoir temperatures:\n");
     printf("eta =\t%.3f\t%%\n", etarev*100);
     
-    if(etaproc == etarev)
+    if(fabs(etaproc - etarev) < 0.0005)
     {
         printf("Your process is reversible\n\n");
     }else{
@@ -381,7 +381,7 @@ void CarnotWrite(double P1, double P2, double P3, double P4, double THot, double
     fprintf(fp, "Thermal efficiency from reservoir temperatures:\n");
     fprintf(fp, "eta =\t%.3f\t%%\n", etarev*100);
     
-    if(etaproc == etarev)
+    if(fabs(etaproc - etarev) < 0.0005)
     {
         fprintf(fp, "Your process is reversible\n\n");
     }else{
