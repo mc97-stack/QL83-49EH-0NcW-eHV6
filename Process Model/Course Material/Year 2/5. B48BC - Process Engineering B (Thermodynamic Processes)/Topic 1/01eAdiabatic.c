@@ -465,7 +465,7 @@ void Adiabatic()
         whilmethod = 1;
         while(whilmethod == 1)
         {
-            printf("Please select from the following calculation methods:\n1. Volume change\n2. Temperature change\n");
+            printf("Please select from the following calculation methods:\n1. Pressure-Volume\n2. Pressure-Temperature\n");
             // Add the ability calculate the volume work from a pressure change
             printf("Selection [1 - 2]: ");
             fgets(input, sizeof(input), stdin);
@@ -505,7 +505,24 @@ void Adiabatic()
             
             *profile = AdiaProfile(method, P1, P2, V1, V2, T1, n, gamma);
             
-            T2 = profile->T[249];
+            if(P1 == 0){
+                P1 = profile->P[0];
+            }
+            if(P2 == 0){
+                P2 = profile->P[249];
+            }
+            if(V1 == 0){
+                V1 = profile->V[0];
+            }
+            if(V2 == 0){
+                V2 = profile->V[249];
+            }
+            if(T1 == 0){
+                T1 = profile->T[0];
+            }
+            if(T2 == 0){
+                T2 = profile->T[249];
+            }
             
             clock_getres(CLOCK_MONOTONIC, &end);
             clock_gettime(CLOCK_MONOTONIC, &end);
