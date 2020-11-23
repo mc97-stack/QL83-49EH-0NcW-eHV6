@@ -44,17 +44,17 @@ double inputDouble(int allowZero, int allowNeg, char VariableName[], char Units[
         printf("Please enter a value for %s", VariableName);
         if(strcmp(Units, "") == 0)
         {
-            printf(": ");
+            //  Do nothing
         }else{
-            printf(" (%s): ", Units);
+            printf(" (%s)", Units);
         }
+        printf(": ");
         
         input = atof(fgets(value, sizeof(value), stdin));
         if(allowZero == 0 && input == 0.0){
             printf("This variable must have a non-zero value. Please enter a different value.\n");
             goto skip;
         }else{
-            // Do nothing
             if(allowNeg == 1){
                 control = 0;    // Break the while loop if not checking for a negative number.
                 goto skip;

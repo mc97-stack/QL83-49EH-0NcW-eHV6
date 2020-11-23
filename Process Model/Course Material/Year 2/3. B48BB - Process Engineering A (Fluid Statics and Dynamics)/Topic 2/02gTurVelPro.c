@@ -78,7 +78,7 @@ TurVelProf TurVelProCalculation(double vmax, double d, int *rows)
     
     TurVelProf profile = {0.0};
     
-    interval = 0.001;
+    interval = 0.00001;
     prad = d/2;
     
     *rows = ((prad)/ (interval)) + 1;
@@ -104,18 +104,18 @@ void TurVelProDisplay(double umax, double d, int rows, TurVelProf profile)
     
     //Write to file
     printf("\tInput parameters:\n");
-    printf("Maximum fluid velocity:");
+    printf("Maximum fluid velocity:\n");
     printf("u_{max.} =\t%.3f\tm/s\n", umax);
     printf("Pipe diameter:\n");
     printf("d =\t%.3f\tmm\n", d*1000);
     
     printf("\tOutput parameters:\n");
     printf("r (mm)\tv_x (m/s)\tv_x/v_{max}\n");
-    for(int i = 0; i < ++rows; ++i)
+    for(int i = 0; i < rows; ++i)
     {
         printf("%.3f\t", 1000*profile.r[i]);
-        printf("%.3f\t", profile.v_x[i]);
-        printf("%.3f\n", profile.ratio[i]);
+        printf("%.5f\t", profile.v_x[i]);
+        printf("%.5f\n", profile.ratio[i]);
     }
 }
 
@@ -170,18 +170,18 @@ void TurVelProWrite(double umax, double d, int rows, TurVelProf profile)
     //  Write to file
     fprintf(fp, "_Turbulent_Velocity_Profile_(Prandtl's_One-Seventh_Law)_Results_\n");
     fprintf(fp, "\tInput parameters:\n");
-    fprintf(fp, "Maximum fluid velocity:");
+    fprintf(fp, "Maximum fluid velocity:\n");
     fprintf(fp, "u_{max.} =\t%.3f\tm/s\n", umax);
     fprintf(fp, "Pipe diameter:\n");
     fprintf(fp, "d =\t%.3f\tmm\n", d*1000);
     
     fprintf(fp, "\tOutput parameters:\n");
     fprintf(fp, "r (mm)\tv_x (m/s)\tv_x/v_{max}\n");
-    for(int i = 0; i < ++rows; ++i)
+    for(int i = 0; i < rows; ++i)
     {
         fprintf(fp, "%.3f\t", 1000*profile.r[i]);
-        fprintf(fp, "%.3f\t", profile.v_x[i]);
-        fprintf(fp, "%.3f\n", profile.ratio[i]);
+        fprintf(fp, "%.5f\t", profile.v_x[i]);
+        fprintf(fp, "%.5f\n", profile.ratio[i]);
     }
     
     //  Close file
@@ -283,6 +283,7 @@ void TurbulentVelPro()
         //  Writing to File
         TurVelProSwitch(2, vmax, d, rows, *profile);
         free(profile);
+        whilmain = 0;
     }
     fflush(stdout);
 }

@@ -68,6 +68,8 @@ double IsobVolume(double P, double V1, double V2)
     work = V2 - V1;
     work = P*(work);
     
+    work = -1 * (work);
+    
     return work;
 }
 
@@ -158,7 +160,11 @@ T1ThermoProf IsobProfile(int method, double P, double V1, double V2, double T1, 
 /// MARK: DISPLAY AND WRITE
 void IsobProcDisplay(double P, double V1, double V2, double T1, double T2, double n, T1ThermoProf profile)
 {
+    char input[maxstrlen];
+    
     double total = 0.0;
+    
+    int control = 0;        // Variable used to force character input.
     
     printf("_Isobaric_Process_Results_\n");
     printf("\tInput parameters:\n");
@@ -181,19 +187,44 @@ void IsobProcDisplay(double P, double V1, double V2, double T1, double T2, doubl
     printf("n =\t%.3f\tkmol/s\n", n*0.001);
     printf("R =\t%.4f\tJ/(mol. K)\n\n", R);
     
-    printf("\tOutput parameters:\n");
-    
-    // Profile (Two Temperature columns (K and deg C))
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\n");
-    for(int i = 0; i < 250; ++i)
+    control = 1;
+    while(control == 1)
     {
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        printf("%f\t", profile.W_V[i]*0.001);
-        total += profile.W_V[i]*0.001;
-        printf("%f\n", total);
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                // Profile (Two Temperature columns (K and deg C))
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\n");
+                for(int i = 0; i < 250; ++i)
+                {
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    printf("%f\t", profile.W_V[i]*0.001);
+                    total += profile.W_V[i]*0.001;
+                    printf("%f\n", total);
+                }
+                control = 0;
+            break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+            break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }
@@ -410,6 +441,19 @@ void Isobaric()
             clock_gettime(CLOCK_MONOTONIC, &start);
             
             *profile = IsobProfile(method, P, V1, V2, T1, T2, n);
+            
+            if(V1 == 0){
+                V1 = profile->V[0];
+            }
+            if(V2 == 0){
+                V2 = profile->V[249];
+            }
+            if(T1 == 0){
+                T1 = profile->T[0];
+            }
+            if(T2 == 0){
+                T2 = profile->T[249];
+            }
             
             clock_getres(CLOCK_MONOTONIC, &end);
             clock_gettime(CLOCK_MONOTONIC, &end);

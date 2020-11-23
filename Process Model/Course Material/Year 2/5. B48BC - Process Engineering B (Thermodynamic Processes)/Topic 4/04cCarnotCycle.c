@@ -206,6 +206,10 @@ T4CarnotProfile CarnotProfileCalc(double P1, double P2, double P3, double P4, do
 /// MARK: DISPLAY AND WRITE
 void CarnotDisplay(double P1, double P2, double P3, double P4, double THot, double TCold, double n, double gamma1, double gamma2, T4CarnotProfile profile, double worknet, double qhot, double qcold)
 {
+    char input[maxstrlen];
+    
+    int control = 0;        // Variable used to force character input.
+    
     printf("_Carnot_Cycle_Results_\n");
     printf("\tInput parameters:\n");
     printf("Pressure before entry into pump:\n");
@@ -249,7 +253,7 @@ void CarnotDisplay(double P1, double P2, double P3, double P4, double THot, doub
     printf("Thermal efficiency from reservoir temperatures:\n");
     printf("eta =\t%.3f\t%%\n", etarev*100);
     
-    if(etaproc == etarev)
+    if(fabs(etaproc - etarev) < 0.0005)
     {
         printf("Your process is reversible\n\n");
     }else{
@@ -261,30 +265,58 @@ void CarnotDisplay(double P1, double P2, double P3, double P4, double THot, doub
         }
     }
     
-    printf("\tOutput parameters:\n");
-    double totalwork = 0.0;
-    double totalheat = 0.0;
-    double totalchaos = 0.0;
     
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\t\tQ (kW)\tQ (kW)\t\tS (kJ/K(.s))\tS (kJ/K(.s))\n");
-    for(int i = 0; i < 1500; ++i)
+    
+    control = 1;
+    while(control == 1)
     {
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        
-        printf("%f\t", profile.work[i]*0.001);
-        totalwork += profile.work[i];
-        printf("%f\t\t", totalwork);
-        
-        printf("%f\t", profile.heat[i]*0.001);
-        totalheat += profile.heat[i];
-        printf("%f\t\t", totalheat);
-        
-        printf("%f\t", profile.entropy[i]*0.001);
-        totalchaos += profile.entropy[i];
-        printf("%f\n", totalchaos);
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                double totalwork = 0.0;
+                double totalheat = 0.0;
+                double totalchaos = 0.0;
+                // Profile (Two Temperature columns (K and deg C))
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\t\tQ (kW)\tQ (kW)\t\tS (kJ/K(.s))\tS (kJ/K(.s))\n");
+                for(int i = 0; i < 1500; ++i)
+                {
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    
+                    printf("%f\t", profile.work[i]*0.001);
+                    totalwork += profile.work[i];
+                    printf("%f\t\t", totalwork);
+                    
+                    printf("%f\t", profile.heat[i]*0.001);
+                    totalheat += profile.heat[i];
+                    printf("%f\t\t", totalheat);
+                    
+                    printf("%f\t", profile.entropy[i]*0.001);
+                    totalchaos += profile.entropy[i];
+                    printf("%f\n", totalchaos);
+                }
+                control = 0;
+            break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+            break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }
@@ -381,7 +413,7 @@ void CarnotWrite(double P1, double P2, double P3, double P4, double THot, double
     fprintf(fp, "Thermal efficiency from reservoir temperatures:\n");
     fprintf(fp, "eta =\t%.3f\t%%\n", etarev*100);
     
-    if(etaproc == etarev)
+    if(fabs(etaproc - etarev) < 0.0005)
     {
         fprintf(fp, "Your process is reversible\n\n");
     }else{

@@ -165,7 +165,11 @@ T1ThermoProf IsocProfile(int method, double P1, double P2, double V, double T1, 
 /// MARK: DISPLAY AND WRITE
 void IsocProcDisplay(double P1, double P2, double V, double T1, double T2, double n, double c_v, T1ThermoProf profile)
 {
+    char input[maxstrlen];
+    
     double total = 0.0;
+    
+    int control = 0;        // Variable used to force character input.
     
     printf("_Isochoric_Process_Results_\n");
     printf("\tInput parameters:\n");
@@ -188,19 +192,44 @@ void IsocProcDisplay(double P1, double P2, double V, double T1, double T2, doubl
     printf("c_v =\t%.3f\tJ/(mol. K)\n", c_v);
     printf("R =\t%.4f\tJ/(mol. K)\n\n", R);
     
-    printf("\tOutput parameters:\n");
-    
-    // Profile (Two Temperature columns (K and deg C))
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tQ (kW)\tQ (kW)\n");
-    for(int i = 0; i < 250; ++i)
+    control = 1;
+    while(control == 1)
     {
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        printf("%f\t", profile.Q[i]*0.001);
-        total += profile.Q[i]*0.001;
-        printf("%f\n", total);
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                // Profile (Two Temperature columns (K and deg C))
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tQ (kW)\tQ (kW)\n");
+                for(int i = 0; i < 250; ++i)
+                {
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    printf("%f\t", profile.Q[i]*0.001);
+                    total += profile.Q[i]*0.001;
+                    printf("%f\n", total);
+                }
+                control = 0;
+            break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+            break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }
@@ -418,6 +447,18 @@ void Isochoric()
             clock_gettime(CLOCK_MONOTONIC, &start);
             
             *profile = IsocProfile(method, P1, P2, V, T1, T2, n, cv);
+            if(P1 == 0){
+                P1 = profile->P[0];
+            }
+            if(P2 == 0){
+                P2 = profile->P[249];
+            }
+            if(T1 == 0){
+                T1 = profile->T[0];
+            }
+            if(T2 == 0){
+                T2 = profile->T[249];
+            }
             
             clock_getres(CLOCK_MONOTONIC, &end);
             clock_gettime(CLOCK_MONOTONIC, &end);

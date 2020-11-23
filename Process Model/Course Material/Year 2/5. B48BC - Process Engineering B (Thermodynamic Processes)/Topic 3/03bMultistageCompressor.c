@@ -224,6 +224,9 @@ T3CompProfile MSCompProfile(double P1, double P2, double Vc, double T1, double n
 /// MARK: DISPLAY AND WRITE
 void MSCompDisplay(double P1, double P2, double Vc, double V1, double V2, double T1, double T2, double n, double N, double gamma, T3CompProfile profile)
 {
+    char input[maxstrlen];
+    
+    int control = 0;        // Variable used to force character input.
     printf("_Multistage_Compressor_Results_\n");
     printf("\tInput parameters:\n");
     printf("Initial system pressure:\n");
@@ -251,15 +254,41 @@ void MSCompDisplay(double P1, double P2, double Vc, double V1, double V2, double
     printf("Heat capacity ratio:\n");
     printf("gamma =\t%.3f\t[ ]\n\n", gamma);
     
-    printf("\tOutput parameters:\n");
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_S (kW)\n");
-    for(int i = 0; i < 1500; ++i){
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        printf("%f\t", profile.W_V[i]*0.001);
-        printf("%f\n", profile.W_S[i]*0.001);
+    control = 1;
+    while(control == 1)
+    {
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_S (kW)\n");
+                for(int i = 0; i < 1500; ++i){
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    printf("%f\t", profile.W_V[i]*0.001);
+                    printf("%f\n", profile.W_S[i]*0.001);
+                }
+                control = 0;
+            break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+            break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }

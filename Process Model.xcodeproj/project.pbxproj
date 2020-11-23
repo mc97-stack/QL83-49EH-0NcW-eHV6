@@ -221,9 +221,9 @@
 		E8205724256ADEE700DA25F0 /* Thermophysical Properties */ = {
 			isa = PBXGroup;
 			children = (
-				E8205725256ADEE700DA25F0 /* ThermophysicalProperties.h */,
-				E8205726256ADEE700DA25F0 /* 02 State Property Relations */,
 				E8205733256ADEE700DA25F0 /* 01 Pure Component Constants */,
+				E8205726256ADEE700DA25F0 /* 02 State Property Relations */,
+				E8205725256ADEE700DA25F0 /* ThermophysicalProperties.h */,
 			);
 			path = "Thermophysical Properties";
 			sourceTree = "<group>";
@@ -767,6 +767,7 @@
 		E86E6CB1256ACE9D004B9493 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Process Model/Process Model.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2R77NGC7T;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -777,6 +778,7 @@
 		E86E6CB2256ACE9D004B9493 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Process Model/Process Model.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2R77NGC7T;
 				ENABLE_HARDENED_RUNTIME = YES;

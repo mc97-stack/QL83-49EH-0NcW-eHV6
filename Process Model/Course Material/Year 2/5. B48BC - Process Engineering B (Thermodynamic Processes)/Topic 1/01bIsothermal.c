@@ -174,7 +174,11 @@ T1ThermoProf IsotProfile(int method, double n, double T, double P1, double P2, d
 /// MARK: DISPLAY AND WRITE
 void IsotProcDisplay(double P1, double P2, double V1, double V2, double T, double n, T1ThermoProf profile)
 {
+    char input[maxstrlen];
+    
     double total = 0.0;
+    
+    int control = 0;        // Variable used to force character input.
     
     printf("_Isothermal_Process_Results_\n");
     printf("\tInput parameters:\n");
@@ -196,19 +200,44 @@ void IsotProcDisplay(double P1, double P2, double V1, double V2, double T, doubl
     printf("n =\t%.3f\tkmol/s\n", n*0.001);
     printf("R =\t8.3145\tJ/(mol. K)\n\n");
     
-    printf("\tOutput parameters:\n");
-    
-    // Profile (Two Temperature columns (K and deg C))
-    printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\n");
-    for(int i = 0; i < 250; ++i)
+    control = 1;
+    while(control == 1)
     {
-        printf("%f\t", profile.P[i]*0.001);
-        printf("%f\t", profile.V[i]);
-        printf("%f\t", profile.T[i]);
-        printf("%f\t\t", profile.T[i] - 273.15);
-        printf("%f\t", profile.W_V[i]*0.001);
-        total += profile.W_V[i]*0.001;
-        printf("%f\n", total);
+        printf("Do you want to display the generated profile? ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+            case 'T':
+            case 'Y':
+            case 't':
+            case 'y':
+                printf("\tOutput parameters:\n");
+                // Profile (Two Temperature columns (K and deg C))
+                printf("P (kPa)\tV (m3)\tT (K)\tT(deg C)\t\tW_V (kW)\tW_V (kW)\n");
+                for(int i = 0; i < 250; ++i)
+                {
+                    printf("%f\t", profile.P[i]*0.001);
+                    printf("%f\t", profile.V[i]);
+                    printf("%f\t", profile.T[i]);
+                    printf("%f\t\t", profile.T[i] - 273.15);
+                    printf("%f\t", profile.W_V[i]*0.001);
+                    total += profile.W_V[i]*0.001;
+                    printf("%f\n", total);
+                }
+                control = 0;
+            break;
+            case '0':
+            case 'F':
+            case 'N':
+            case 'f':
+            case 'n':
+                control = 0;
+            break;
+            default:
+                printf("Input not recognised\n");
+            break;
+        }
     }
     fflush(stdout);
 }
@@ -385,7 +414,7 @@ void Isothermal()
         whilmethod = 1;
         while(whilmethod == 1)
         {
-            printf("Please select from the following calculation methods:\n1. Pressure\n2. Volume\n");
+            printf("Please select from the following calculation methods:\n1. Volume\n2. Pressure\n");
             printf("Selection [1 - 2]: ");
             fgets(input, sizeof(input), stdin);
             switch(input[0])
@@ -394,14 +423,14 @@ void Isothermal()
                 case 'P':
                 case 'p':
                     //code
-                    method  = 2;
+                    method  = 1;
                     whilmethod = 0;
                     break;
                 case '2':
                 case 'V':
                 case 'v':
                     //code
-                    method = 1;
+                    method = 2;
                     whilmethod = 0;
                     break;
                 case 'Q':
@@ -423,6 +452,15 @@ void Isothermal()
             clock_gettime(CLOCK_MONOTONIC, &start);
             
             *profile = IsotProfile(method, n, T, P1, P2, V1, V2);
+            
+            if(method == 1){
+                P1 = profile->P[0];
+                P2 = profile->P[249];
+            }
+            if(method == 2){
+                V1 = profile->V[0];
+                V2 = profile->V[249];
+            }
             
             clock_getres(CLOCK_MONOTONIC, &end);
             clock_gettime(CLOCK_MONOTONIC, &end);
