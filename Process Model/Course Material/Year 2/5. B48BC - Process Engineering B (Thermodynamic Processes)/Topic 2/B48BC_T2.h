@@ -28,26 +28,16 @@ typedef struct T2ThermodynamicProfile{
     double Q[250];
 } T2ThermoProf;
 
-#ifndef Compressor_h
-#define Compressor_h
+#ifndef B48BC_T2_h
+#define B48BC_T2_h
 
 /// This subroutine is used to guide the user through the calculations to design a reciprocating processor using a polytropic or isothermal process.
 void Compressor(void);
 
-#endif /* Compressor_h */
-
-#ifndef PolyShaftWork_h
-#define PolyShaftWork_h
-
 /// This subroutine guides the user through the calculations to find the shaft work for an a polytropic process
 void PolyShaftWork(void);
-
-#endif /* PolyShaftWork */
-
-#ifndef OpenFirstLaw_h
-#define OpenFirstLaw_h
 
 /// This subroutine guides the user through the calculations to first the overall energy content for an open systems and notifies the user of whether the process is operating at steady- or unsteady-state.
 void OpenFirstLaw(void);
 
-#endif /* OpenFirstLaw_h */
+#endif /* B48BC_T2_h */

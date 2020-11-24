@@ -30,6 +30,7 @@
 #include "B48BC_T2.h"
 #include "B48BC_T3.h"
 #include "B48BC_T4.h"
+#include "B48BC_T5.h"
 
 #define maxstrlen 128
 
@@ -180,7 +181,36 @@ void B48BCtopic4(){
 }
 
 void B48BCtopic5(){
-    B48BCTopComm();
+    char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BCTopComm();
+        printf("1. Steady-State Entropy Balance.\n2. Heat Engine/Pump Entropy Balance.\n3. Entropy Change Estimation.\n");
+        printf("q. Exit topic. \n\n");
+        printf("Selection [1 - 2]: ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0]){
+            case '1':
+                SteadyStateEntropyBalance();
+                break;
+            case '2':
+                EngineEntropyBalance();
+                break;
+            case '3':
+                StateEntropyChange();
+                break;
+            case '0':
+            case 'Q':
+            case 'q':
+                control = 0;
+                break;
+            default:
+                printf("Input not recognised. Please enter an integer between 1 and 4.\n");
+                break;
+        }
+    }
 }
 
 void B48BCtopic6(){

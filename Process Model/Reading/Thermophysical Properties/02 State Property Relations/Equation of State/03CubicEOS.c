@@ -362,8 +362,8 @@ void CubicEOS(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-            //  Subroutine behaviour (Delete me when done)
         char input[maxstrlen];      // Variable used to store character input.
+        int abort = 0;              // Variable used to abort calculations.
         int control = 0;            // Variable used to control the number of individual isotherms generated.
         int eqn = 0;                // Variable used to control which equation of state is calculated. All equations is also an option.
         int ContCond = 0;           // Variable used to control whether the while loop generating the isotherm should be broken or not.
@@ -406,8 +406,6 @@ void CubicEOS(void)
         double elapsed = 0.0;
         
         //  Data Collection
-        CubicEOSVariable(&Pc, &Tc, &omega);
-        
         control = 1;
         while(control == 1)
         {
@@ -441,11 +439,19 @@ void CubicEOS(void)
                     eqn = 5;
                     control = 0;
                     break;
+                case '0':
+                case 'Q':
+                case 'q':
+                    abort = 1;
+                    goto skip;
+                    break;
                 default:
                     printf("Input not recognised. Please enter an integer between 1 and 3.\n");
                     break;
             }
         }
+        
+        CubicEOSVariable(&Pc, &Tc, &omega);
         
         control = 1;
         while(control == 1)
@@ -492,11 +498,6 @@ void CubicEOS(void)
             //  writing results
             CubicEOSSwitch(2, eqn, Pc, Tc, omega, T, VdWa, VdWb, RKa, RKb, SRKa, SRKb, PRa, PRb, *VdWEOSIsotherm, *RKEOSIsotherm, *SRKEOSIsotherm, *PREOSIsotherm);
             
-            free(VdWEOSIsotherm);
-            free(RKEOSIsotherm);
-            free(SRKEOSIsotherm);
-            free(PREOSIsotherm);
-            
             ContCond = 1;
             while(ContCond == 1)
             {
@@ -524,10 +525,19 @@ void CubicEOS(void)
                     break;
                 }
             }
+        skip:
+            free(VdWEOSIsotherm);
+            free(RKEOSIsotherm);
+            free(SRKEOSIsotherm);
+            free(PREOSIsotherm);
+            
+            if(abort == 1){
+                goto end;
+            }
         }
-        
         //  Continue function
         whilmain = Continue(whilmain);
     }
+end:
     fflush(stdout);
 }

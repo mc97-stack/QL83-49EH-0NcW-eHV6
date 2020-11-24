@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E812AA17256D29E00029DF78 /* 05bEngineEntropyBalance.c in Sources */ = {isa = PBXBuildFile; fileRef = E812AA16256D29E00029DF78 /* 05bEngineEntropyBalance.c */; };
+		E812AA1D256D55E60029DF78 /* 05cStateEntropyChange.c in Sources */ = {isa = PBXBuildFile; fileRef = E812AA1C256D55E60029DF78 /* 05cStateEntropyChange.c */; };
 		E82057B2256ADEE800DA25F0 /* License.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205723256ADEE700DA25F0 /* License.c */; };
 		E82057B3256ADEE800DA25F0 /* 03CubicEOSConstants.c in Sources */ = {isa = PBXBuildFile; fileRef = E820572A256ADEE700DA25F0 /* 03CubicEOSConstants.c */; };
 		E82057B4256ADEE800DA25F0 /* 01IdealGas.c in Sources */ = {isa = PBXBuildFile; fileRef = E820572B256ADEE700DA25F0 /* 01IdealGas.c */; };
@@ -65,6 +67,10 @@
 		E82057E9256ADEE800DA25F0 /* 01dSurfTens.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057AD256ADEE800DA25F0 /* 01dSurfTens.c */; };
 		E82057EA256ADEE800DA25F0 /* B48BB.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057AE256ADEE800DA25F0 /* B48BB.c */; };
 		E82057EB256ADEE800DA25F0 /* Year1.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057B1256ADEE800DA25F0 /* Year1.c */; };
+		E82057FA256D11C600DA25F0 /* Courses.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057F9256D11C600DA25F0 /* Courses.c */; };
+		E82057FF256D140E00DA25F0 /* ThermophysicalProperties.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057FE256D140E00DA25F0 /* ThermophysicalProperties.c */; };
+		E8205803256D146700DA25F0 /* Reading.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205802256D146700DA25F0 /* Reading.c */; };
+		E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +87,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E812AA15256D29E00029DF78 /* 05bEngineEntropyBalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 05bEngineEntropyBalance.h; sourceTree = "<group>"; };
+		E812AA16256D29E00029DF78 /* 05bEngineEntropyBalance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 05bEngineEntropyBalance.c; sourceTree = "<group>"; };
+		E812AA1B256D55E60029DF78 /* 05cStateEntropyChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 05cStateEntropyChange.h; sourceTree = "<group>"; };
+		E812AA1C256D55E60029DF78 /* 05cStateEntropyChange.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 05cStateEntropyChange.c; sourceTree = "<group>"; };
 		E8205722256ADEE700DA25F0 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		E8205723256ADEE700DA25F0 /* License.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = License.c; sourceTree = "<group>"; };
 		E8205725256ADEE700DA25F0 /* ThermophysicalProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermophysicalProperties.h; sourceTree = "<group>"; };
@@ -203,6 +213,13 @@
 		E82057AE256ADEE800DA25F0 /* B48BB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = B48BB.c; sourceTree = "<group>"; };
 		E82057AF256ADEE800DA25F0 /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
 		E82057B1256ADEE800DA25F0 /* Year1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Year1.c; sourceTree = "<group>"; };
+		E82057F8256C584500DA25F0 /* B48BC_T5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BC_T5.h; sourceTree = "<group>"; };
+		E82057F9256D11C600DA25F0 /* Courses.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Courses.c; sourceTree = "<group>"; };
+		E82057FE256D140E00DA25F0 /* ThermophysicalProperties.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ThermophysicalProperties.c; sourceTree = "<group>"; };
+		E8205802256D146700DA25F0 /* Reading.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Reading.c; sourceTree = "<group>"; };
+		E8205805256D161600DA25F0 /* Reading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reading.h; sourceTree = "<group>"; };
+		E8205807256D1B1200DA25F0 /* 05aEntropyBalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 05aEntropyBalance.h; sourceTree = "<group>"; };
+		E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 05aEntropyBalance.c; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +241,7 @@
 				E8205733256ADEE700DA25F0 /* 01 Pure Component Constants */,
 				E8205726256ADEE700DA25F0 /* 02 State Property Relations */,
 				E8205725256ADEE700DA25F0 /* ThermophysicalProperties.h */,
+				E82057FE256D140E00DA25F0 /* ThermophysicalProperties.c */,
 			);
 			path = "Thermophysical Properties";
 			sourceTree = "<group>";
@@ -279,6 +297,7 @@
 		E820573D256ADEE700DA25F0 /* Course Material */ = {
 			isa = PBXGroup;
 			children = (
+				E82057F9256D11C600DA25F0 /* Courses.c */,
 				E82057AF256ADEE800DA25F0 /* Courses.h */,
 				E82057B0256ADEE800DA25F0 /* Year 1 */,
 				E8205742256ADEE700DA25F0 /* Year 2 */,
@@ -323,6 +342,7 @@
 				E8205756256ADEE700DA25F0 /* Topic 2 */,
 				E8205744256ADEE700DA25F0 /* Topic 3 */,
 				E820574C256ADEE700DA25F0 /* Topic 4 */,
+				E82057F7256C573500DA25F0 /* Topic 5 */,
 			);
 			path = "5. B48BC - Process Engineering B (Thermodynamic Processes)";
 			sourceTree = "<group>";
@@ -503,6 +523,30 @@
 			path = "Year 1";
 			sourceTree = "<group>";
 		};
+		E82057F7256C573500DA25F0 /* Topic 5 */ = {
+			isa = PBXGroup;
+			children = (
+				E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */,
+				E8205807256D1B1200DA25F0 /* 05aEntropyBalance.h */,
+				E812AA16256D29E00029DF78 /* 05bEngineEntropyBalance.c */,
+				E812AA15256D29E00029DF78 /* 05bEngineEntropyBalance.h */,
+				E812AA1C256D55E60029DF78 /* 05cStateEntropyChange.c */,
+				E812AA1B256D55E60029DF78 /* 05cStateEntropyChange.h */,
+				E82057F8256C584500DA25F0 /* B48BC_T5.h */,
+			);
+			path = "Topic 5";
+			sourceTree = "<group>";
+		};
+		E82057FD256D138400DA25F0 /* Reading */ = {
+			isa = PBXGroup;
+			children = (
+				E8205724256ADEE700DA25F0 /* Thermophysical Properties */,
+				E8205802256D146700DA25F0 /* Reading.c */,
+				E8205805256D161600DA25F0 /* Reading.h */,
+			);
+			path = Reading;
+			sourceTree = "<group>";
+		};
 		E86E6CA0256ACE9D004B9493 = {
 			isa = PBXGroup;
 			children = (
@@ -527,7 +571,7 @@
 				E8205722256ADEE700DA25F0 /* main.h */,
 				E8205738256ADEE700DA25F0 /* Common subroutines */,
 				E820573D256ADEE700DA25F0 /* Course Material */,
-				E8205724256ADEE700DA25F0 /* Thermophysical Properties */,
+				E82057FD256D138400DA25F0 /* Reading */,
 			);
 			path = "Process Model";
 			sourceTree = "<group>";
@@ -595,6 +639,7 @@
 				E82057D2256ADEE800DA25F0 /* 03dOneK.c in Sources */,
 				E82057E8256ADEE800DA25F0 /* 01aFluComp.c in Sources */,
 				E82057C5256ADEE800DA25F0 /* 02aCompressor.c in Sources */,
+				E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */,
 				E82057C2256ADEE800DA25F0 /* 04cCarnotCycle.c in Sources */,
 				E82057E5256ADEE800DA25F0 /* 01eBubPres.c in Sources */,
 				E82057C8256ADEE800DA25F0 /* B48BC.c in Sources */,
@@ -607,9 +652,11 @@
 				E82057E4256ADEE800DA25F0 /* 01bFluidVHyd.c in Sources */,
 				E82057C3256ADEE800DA25F0 /* 04bCoefficientofPerformance.c in Sources */,
 				E82057BE256ADEE800DA25F0 /* 03aJTEffect.c in Sources */,
+				E812AA17256D29E00029DF78 /* 05bEngineEntropyBalance.c in Sources */,
 				E82057C7256ADEE800DA25F0 /* 02bPolyShaftWork.c in Sources */,
 				E82057DD256ADEE800DA25F0 /* 02cBernEqn.c in Sources */,
 				E82057BA256ADEE800DA25F0 /* IdealGasLaw.c in Sources */,
+				E82057FA256D11C600DA25F0 /* Courses.c in Sources */,
 				E82057B9256ADEE800DA25F0 /* 01PureComponent.c in Sources */,
 				E82057D1256ADEE800DA25F0 /* 03bGenPressureLoss.c in Sources */,
 				E82057E2256ADEE800DA25F0 /* 02hHagPois.c in Sources */,
@@ -640,6 +687,7 @@
 				E82057DF256ADEE800DA25F0 /* 02dReyNo.c in Sources */,
 				E82057CE256ADEE800DA25F0 /* Year2.c in Sources */,
 				E82057CF256ADEE800DA25F0 /* 03aFrictFactor.c in Sources */,
+				E812AA1D256D55E60029DF78 /* 05cStateEntropyChange.c in Sources */,
 				E82057CB256ADEE800DA25F0 /* 01eAdiabatic.c in Sources */,
 				E82057EB256ADEE800DA25F0 /* Year1.c in Sources */,
 				E82057BD256ADEE800DA25F0 /* Year3.c in Sources */,
@@ -647,6 +695,8 @@
 				E82057D8256ADEE800DA25F0 /* 03dThreeK.c in Sources */,
 				E82057EA256ADEE800DA25F0 /* B48BB.c in Sources */,
 				E82057D0256ADEE800DA25F0 /* 03d1Fittings.c in Sources */,
+				E8205803256D146700DA25F0 /* Reading.c in Sources */,
+				E82057FF256D140E00DA25F0 /* ThermophysicalProperties.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

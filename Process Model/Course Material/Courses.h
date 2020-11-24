@@ -19,6 +19,59 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+#ifndef CourseSelection_h
+#define CourseSelection_h
+
+void Year1(void);
+
+/* This function contains access to the following subroutines:
+ - B17CA - Principles of Chemistry
+ - B47AA - Process Industries A
+ - B47AC - Foundation Engineering A (Physics)
+ - F17XA - Mathematics for Engineers and Scientists 1
+ - B17BC - Chemical Reactivity
+ - B47AB - Process Industries B
+ - B47AD - Foundation Engineering B (Biology)
+ - F17XB - Mathematics for Engineers and Scientists 2
+ */
+
+void Year2(void);
+
+/* This function contains access to the following subroutines:
+ - B18AP - Chemical Thermodynamics and Introductory Chemical Kinetics for Chemical Engineers
+ - B48BA - Process Industries C
+ - B48BB - Process Engineering A (Fluid Statics and Dynamics)
+ - F18XC - Mathematics for Engineers and Scientists 3
+ - B48BC - Process Engineering B (Introduction to Thermodynamics)
+ - B48BD - Process Engineering C (Heat Transfer)
+ - F18XD - Mathematics for Engineers and Scientists 4
+ */
+
+void Year3(void);
+
+/* This function contains access to the following subroutines:
+- B18OA - Organic Structural Identification, Stereochemistry and Reaction Mechanisms
+- B48CA - Separation Processes A
+- B49CB - Business Awareness, Safety and Sustainability
+- F49CC - Chemical Reaction Engineering A
+- B18OB - Synthesis in Organic Chemistry
+- B48CB - Separation Processes B
+- B49CE - Multiphase Thermodynamics
+- B49CF - Process Modelling and Control
+*/
+
+void Year4(void);
+
+/* This function contains access to the following subroutines:
+- B40DB - Sustainability, Health and Safety
+- B40EA - Unit Operations A
+- B40DC - Energy Generation and Utilisation
+- B41OA - Oil and Gas Processing
+- B40DD - Reaction Engineering B
+*/
+
+#endif /* CourseSelection_h */
+
 //Year 1 Courses
 #ifndef B17CA_h
 #define B17CA_h

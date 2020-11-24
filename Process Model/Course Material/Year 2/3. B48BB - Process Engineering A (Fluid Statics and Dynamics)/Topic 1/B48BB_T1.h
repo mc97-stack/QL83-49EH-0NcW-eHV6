@@ -19,50 +19,25 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-#ifndef FluComp_h
-#define FluComp_h
+#ifndef B48BB_T1_h
+#define B48BB_T1_h
 
 /// This subroutine guides the user through gathering the data and calculation of the fluid coefficient of compressibility derived from the ideal gas law.
 void CoefficientofCompressibility(void);
 
-#endif /* FluComp_h */
-
-#ifndef FluidVHyd_h
-#define FluidVHyd_h
-
 /// This subroutine guides the user through gathering the data and calculation of the hydrostatic pressure gradient for a stationary fluid.
 void FluidVerticalHydrostaticPressure(void);
-
-#endif /* FluidVHyd_h */
-
-#ifndef Mano_h
-#define Mano_h
 
 /// This subroutine guides the user through gathering the data and calculation of the pressure that a fluid exerts of a system wall through either a vertical or inclined manometer.
 void Manometer(void);
 
-#endif /* Mano_h */
-
-#ifndef SurfTens_h
-#define SurfTens_h
-
 /// This subroutine guides the user through gathering the data and calculation of  the force required to break a fluid's surface through the du Nouy ring method.
 void SurfaceTension(void);
-
-#endif /* SurfTens_h */
-
-#ifndef BubPres_h
-#define BubPres_h
 
 /// This subroutine guides the user through gathering the data and calculation of bubble pressure using the fluid surface tension.
 void BubblePressure(void);
 
-#endif /* BubPres_h */
-
-#ifndef Capp_h
-#define Capp_h
-
 /// This subroutine guides the user through gathering the data and calculation of capillarity effects from surface tension data.
 void Cappilarity(void);
 
-#endif /* Capp_h */
+#endif /* B48BB_T1_h */

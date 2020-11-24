@@ -401,7 +401,7 @@ double AcentricFactor(void)
                 case '0':
                 case 'Q':
                 case 'q':
-                    goto end;
+                    goto quit;
                     break;
                 default:
                     printf("Input not recognised. Please enter an integer between 1 and 4.\n");
@@ -491,7 +491,7 @@ double AcentricFactor(void)
         
         printf("\n");
     }
-end:
+quit:
     fflush(stdout);
     return omega;
 }

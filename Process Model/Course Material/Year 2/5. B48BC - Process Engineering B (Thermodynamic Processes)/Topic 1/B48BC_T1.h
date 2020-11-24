@@ -34,42 +34,50 @@ typedef struct T1ThermodynamicProfile{
 
 #endif /* ThermoProfiler_h */
 
-#ifndef Polytropic_h
-#define Polytropic_h
+#ifndef B48BC_T1_h
+#define B48BC_T1_h
 
 /// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for a polytropic process.
 void Polytropic(void);
 
-#endif /* Polytropic_h */
+/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Isothermal process.
+void Isothermal(void);
+
+/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Isobaric process.
+void Isobaric(void);
+
+/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Isochoric process.
+void Isochoric(void);
+
+/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Adiabatic process.
+void Adiabatic(void);
+
+#endif /* B48BC_T1_h */
 
 #ifndef Isothermal_h
 #define Isothermal_h
 
-/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Isothermal process.
-void Isothermal(void);
+
 
 #endif /* Isothermal_h */
 
 #ifndef Isobaric_h
 #define Isobaric_h
 
-/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Isobaric process.
-void Isobaric(void);
+
 
 #endif /* Isobaric_h */
 
 #ifndef Isochoric_h
 #define Isochoric_h
 
-/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Isochoric process.
-void Isochoric(void);
+
 
 #endif /* Isochoric_h */
 
 #ifndef Adiabatic_h
 #define Adiabatic_h
 
-/// This subroutine is used to guide the user through collecting the data required to estimate the volume work and plot the thermodynamic profile for an Adiabatic process.
-void Adiabatic(void);
+
 
 #endif /* Adiabatic_h */

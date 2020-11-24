@@ -463,8 +463,8 @@ void Compressor(void)
                 case '0':
                 case 'Q':
                 case 'q':
-                    whilmethod = 0;
                     whilmain = 0;
+                    goto quit;
                     break;
                 default:
                     printf("Invalid input, please try again");
@@ -498,10 +498,12 @@ void Compressor(void)
             
             //  Writing to File
             CompresSwitch(2, P1, P2, Vc, V1, V2, T1, T2, n, R, alpha, *profile);
-            free(profile);
+            
         }
         //  Continue function
         whilmain = Continue(whilmain);
+    quit:
+        free(profile);
     }
     fflush(stdout);
 }

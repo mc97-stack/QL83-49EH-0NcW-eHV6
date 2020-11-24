@@ -19,8 +19,8 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-#ifndef PumpSizing_h
-#define PumpSizing_h
+#ifndef B48BB_T4_h
+#define B48BB_T4_h
 
 /// This subroutine guides the user through gathering the data and sizing of a centrifugal pump.
 void PumpSizing(void);

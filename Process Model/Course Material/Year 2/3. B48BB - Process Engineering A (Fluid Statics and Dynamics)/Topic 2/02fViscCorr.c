@@ -306,17 +306,23 @@ void ViscosityCorrelation()
                     printf("Liquid viscosity correlation selected.\n");
                     method = 1;
                     whilmethod = 0;
-                break;
+                    break;
                 case '2':
                 case 'V':
                 case 'v':
                     printf("Vapour viscosity correlation selected\n");
                     method = 2;
                     whilmethod = 0;
-                break;
+                    break;
+                case '0':
+                case 'Q':
+                case 'q':
+                    whilmain = 0;
+                    goto quit;
+                    break;
                 default:
                     printf("Input not recognised\n");
-                break;
+                    break;
             }
         }
         printf("\n");
@@ -356,6 +362,7 @@ void ViscosityCorrelation()
         
         //  Continue function
         whilmain = Continue(whilmain);
+    quit: printf("");
     }
     printf("\n");
     fflush(stdout);

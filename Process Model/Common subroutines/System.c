@@ -117,7 +117,7 @@ int Continue(int ControlVariable)
             case 't':
             case 'y':
                 ContCond = 0;
-            break;
+                break;
             case '0':
             case 'F':
             case 'N':
@@ -125,10 +125,10 @@ int Continue(int ControlVariable)
             case 'n':
                 ControlVariable = 0;
                 ContCond = 0;
-            break;
+                break;
             default:
                 printf("Input not recognised\n");
-            break;
+                break;
         }
     }
     fflush(stdout);
