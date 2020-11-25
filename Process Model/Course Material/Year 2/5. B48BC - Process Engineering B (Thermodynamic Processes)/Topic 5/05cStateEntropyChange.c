@@ -3,7 +3,6 @@
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.
-//
 //  
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -19,6 +18,7 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //  
 
+/// MARK: HEADER DECLARATIONS
 //Standard Header Files
 #include <math.h>
 #include <stdio.h>
@@ -31,9 +31,11 @@
 #include "B48BC_T5.h"
 #include "05cStateEntropyChange.h"
 
+/// MARK: SUBROUTINE DEFINITIONS
 #define maxstrlen 128
 #define R 8.3145
 
+/// MARK: VARIABLE INPUT
 void IdealChangeVariable(int method, double *cp, double *P1, double *P2, double *v1, double *v2, double *T1, double *T2)
 {
     *cp = inputDouble(0, 0, "heat capacity at constant pressure", "kJ/kmol.K");
@@ -60,6 +62,7 @@ void IdealChangeVariable(int method, double *cp, double *P1, double *P2, double 
     }
 }
 
+/// MARK: GENERAL CALCULATIONS
 double PTIdealCalculation(double cp, double P1, double P2, double T1, double T2)
 {
     double ds = 0.0;
@@ -118,6 +121,7 @@ double TvIdealCalculation(double cp, double T1, double T2, double v1, double v2)
     return ds;
 }
 
+/// MARK: DISPLAY AND WRITE
 void EntropyChangeDisplay(double cp, double P1, double P2, double v1, double v2, double T1, double T2, double ds)
 {
     printf("_Entropy_Change_Results_\n");
@@ -261,6 +265,7 @@ void EntropyChangeWriteSwitch(double cp, double P1, double P2, double v1, double
     }
 }
 
+/// MARK: PSEUDO-MAIN FUNCTION
 void StateEntropyChange(void)
 {
     int whilmain = 0;

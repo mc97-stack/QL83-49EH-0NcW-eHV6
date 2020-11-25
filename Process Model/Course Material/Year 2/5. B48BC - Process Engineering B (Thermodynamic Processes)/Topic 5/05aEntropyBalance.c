@@ -3,7 +3,6 @@
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.
-//
 //  
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -19,6 +18,7 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //  
 
+/// MARK: HEADER DECLARATIONS
 //Standard Header Files
 #include <math.h>
 #include <stdio.h>
@@ -31,8 +31,10 @@
 #include "B48BC_T5.h"
 #include "05aEntropyBalance.h"
 
+/// MARK: SUBROUTINE DEFINITIONS
 #define maxstrlen 128
 
+/// MARK: VARIABLE INPUT
 void EntropyBalanceVariable(double *m, double *cp, double *T1, double *T2, double *TSurr)
 {
     *m = inputDouble(0, 0, "mass in system", "kg/s");
@@ -49,6 +51,7 @@ void EntropyBalanceVariable(double *m, double *cp, double *T1, double *T2, doubl
     *TSurr = (*TSurr)+273.15;
 }
 
+/// MARK: GENERAL CALCULATIONS
 double EntropyBalanceSysCalc(double m, double cp, double T1, double T2)
 {
     double dS = 0.0;
@@ -83,6 +86,7 @@ double EntropyBalance(double System, double Surroundings)
     return System + Surroundings;
 }
 
+/// MARK: DISPLAY AND WRITE
 void EntropyBalanceDisplay(double m, double cp, double T1, double T2, double TSurr, double SysEntropy, double SurrEntropy, double TotalEntropy)
 {
     printf("_Steady-State_Entropy_Balance_Results_\n");
@@ -244,6 +248,7 @@ void EntropyBalanceWriteSwitch(double m, double cp, double T1, double T2, double
     }
 }
 
+/// MARK: PSEUDO-MAIN FUNCTION
 void SteadyStateEntropyBalance(void)
 {
     int whilmain = 0;

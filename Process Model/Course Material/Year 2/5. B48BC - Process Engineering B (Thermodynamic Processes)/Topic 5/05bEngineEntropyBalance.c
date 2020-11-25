@@ -3,7 +3,6 @@
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.
-//
 //  
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -19,6 +18,7 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //  
 
+/// MARK: HEADER DECLARATIONS
 //Standard Header Files
 #include <math.h>
 #include <stdio.h>
@@ -32,8 +32,10 @@
 #include "05aEntropyBalance.h"
 #include "05bEngineEntropyBalance.h"
 
+/// MARK: SUBROUTINE DEFINITIONS
 #define maxstrlen 128
 
+/// MARK: VARIABLE INPUT
 void CycleVariable(int mode, double *work)
 {
     if(mode == 1){
@@ -68,6 +70,7 @@ void SurrVariable(double *TSurr)
     *TSurr = (*TSurr) + 273.15;
 }
 
+/// MARK: GENERAL CALCULATIONS
 double HeatEngineEntropyBalance(int HotCount, T5Reservoir hot, double work, double TSurr, double *dSHot, double *dSCold)
 {
     double HotHeat = 0.0;
@@ -102,6 +105,7 @@ double HeatPumpEntropyBalance(int ColdCount, T5Reservoir cold, double work, doub
     return EntropyBalance(0, (*dSHot + *dSCold));
 }
 
+/// MARK: DISPLAY AND WRITE
 void EngineEntropyDisplay(int mode, double work, double TSurr, T5Reservoir hot, T5Reservoir cold, int HotCount, int ColdCount, double dSHot, double dSCold, double dSTotal)
 {
     if(mode == 1){
@@ -324,6 +328,7 @@ void EngineEntropyWriteSwitch(int mode, double work, double TSurr, T5Reservoir h
     }
 }
 
+/// MARK: PSEUDO-MAIN FUNCTION
 void EngineEntropyBalance(void)
 {
     int whilmain = 0;
