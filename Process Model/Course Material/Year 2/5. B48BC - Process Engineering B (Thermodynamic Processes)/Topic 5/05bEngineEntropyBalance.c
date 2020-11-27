@@ -1,5 +1,5 @@
 //
-//  EngineEntropyBalance.c
+//  05bEngineEntropyBalance.c
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.
@@ -177,7 +177,7 @@ void EngineEntropyWrite(int mode, double work, double TSurr, T5Reservoir hot, T5
     //char driveloc[maxstrlen];
     
     FILE *fp;                   // Pointer to the file location.
-    //  Set file name as timestamp + Polytropic Process Results
+    //  Set file name as timestamp + Heat Engine Entropy Balance Results
         //  Get current time
     time_t rawtime;
     struct tm *info;
@@ -338,7 +338,6 @@ void EngineEntropyBalance(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-            //  Subroutine behaviour (Delete me when done)
         char input[maxstrlen];
         int control = 0;
         int mode = 0;

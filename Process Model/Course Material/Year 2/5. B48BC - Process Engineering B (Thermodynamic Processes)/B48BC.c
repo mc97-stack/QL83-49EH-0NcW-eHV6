@@ -31,6 +31,7 @@
 #include "B48BC_T3.h"
 #include "B48BC_T4.h"
 #include "B48BC_T5.h"
+#include "B48BC_T6.h"
 
 #define maxstrlen 128
 
@@ -207,14 +208,46 @@ void B48BCtopic5(){
                 control = 0;
                 break;
             default:
-                printf("Input not recognised. Please enter an integer between 1 and 4.\n");
+                printf("Input not recognised. Please enter an integer between 1 and 3.\n");
                 break;
         }
     }
 }
 
 void B48BCtopic6(){
-    B48BCTopComm();
+    char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BCTopComm();
+        printf("1. Extent of Reaction.\n2. Equilibrium Conversion.\n3. Equilibrium constant estimation.\n4. Reaction equilibria prediction.\n");
+        printf("q. Exit topic. \n\n");
+        printf("Selection [1 - 4]: ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0]){
+            case '1':
+                ExtentOfReaction();
+                break;
+            case '2':
+                EquilibriumConversion();
+                break;
+            case '3':
+                EquilibriumConstant();
+                break;
+            case '4':
+                IdealReactionCompostion();
+                break;
+            case '0':
+            case 'Q':
+            case 'q':
+                control = 0;
+                break;
+            default:
+                printf("Input not recognised. Please enter an integer between 1 and 4.\n");
+                break;
+        }
+    }
 }
 
 void B48BC(){

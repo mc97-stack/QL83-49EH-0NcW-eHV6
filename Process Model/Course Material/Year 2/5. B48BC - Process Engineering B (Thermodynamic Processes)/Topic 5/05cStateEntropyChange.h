@@ -1,5 +1,5 @@
 //
-//  StateEntropyChange.h
+//  05cStateEntropyChange.h
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.

@@ -1,5 +1,5 @@
 //
-//  EntropyBalance.c
+//  05aEntropyBalance.c
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.
@@ -258,8 +258,6 @@ void SteadyStateEntropyBalance(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-            //  Subroutine behaviour (Delete me when done)
-        
         double TotalEntropy = 0.0;
         double SysEntropy = 0.0;
         double SurrEntropy = 0.0;

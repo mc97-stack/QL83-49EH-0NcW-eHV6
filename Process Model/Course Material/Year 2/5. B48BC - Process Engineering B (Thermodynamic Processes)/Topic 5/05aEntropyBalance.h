@@ -1,5 +1,5 @@
 //
-//  EntropyBalance.h
+//  05aEntropyBalance.h
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.

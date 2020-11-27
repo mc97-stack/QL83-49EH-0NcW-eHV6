@@ -1,5 +1,5 @@
 //
-//  StateEntropyChange.c
+//  05cStateEntropyChange.c
 //  Process Model
 //
 //  Created by Matthew Cheung on 24/11/2020.
@@ -156,7 +156,7 @@ void EntropyChangeWrite(double cp, double P1, double P2, double v1, double v2, d
     //char driveloc[maxstrlen];
     
     FILE *fp;                   // Pointer to the file location.
-    //  Set file name as timestamp + Polytropic Process Results
+    //  Set file name as timestamp + Entropy Change Estimation
         //  Get current time
     time_t rawtime;
     struct tm *info;
@@ -275,15 +275,12 @@ void StateEntropyChange(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-            //  Subroutine behaviour (Delete me when done)
         char input[maxstrlen];
-        
         int control = 0;
         int method = 0;
-            //  Subroutine output (Delete me when done)
-        double ds = 0.0;    // Entropy change.
         
-            //  Subroutine input (Delete me when done)
+        double ds = 0.0;    // Entropy change.
+      
         double cp = 0.0;    // Heat capacity at constant pressure.
         double P1 = 0.0;    // Initial and final system pressure.
         double P2 = 0.0;
