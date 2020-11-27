@@ -447,14 +447,13 @@ void IdealReactionCompostion(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-       
         char input[maxstrlen];
         int control = 0;
         int graph = 0;
         int cont = 0;
-       
+        
         GibbsRxn *table = calloc(1, sizeof(GibbsRxn));
-       
+        
         double Pref = 0.0;
         double P = 0.0;
         double T = 0.0;
