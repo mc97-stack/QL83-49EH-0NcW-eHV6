@@ -619,12 +619,10 @@ void IdealReactionCompostion(void)
                                 case '1':
                                     P = inputDouble(0, 0, "system pressure", "kPa");
                                     P = (P)/101.325;
-                                    cont = 0;
                                     break;
                                 case '2':
                                     T = inputDouble(1, 1, "system temperature", "deg C");
                                     T = (T)+273.15;
-                                    cont = 0;
                                     break;
                                 case '3':
                                     printf("Reagent Variables:\n");
@@ -637,10 +635,26 @@ void IdealReactionCompostion(void)
                                     {
                                         products->initial[i] = inputDouble(1, 0, "initial moles of product i present", "mol");
                                     }
-                                    cont = 0;
                                     break;
                                 default:
                                     printf("Input not recognised. Please enter an integer between 1 and 3.\n");
+                                    break;
+                            }
+                            
+                            printf("Do any other system conditions need changing? [Y/N] ");
+                            fgets(input, sizeof(input), stdin);
+                            switch(input[0])
+                            {
+                                case '1':
+                                case 'Y':
+                                case 'y':
+                                    break;
+                                case '0':
+                                case 'N':
+                                case 'Q':
+                                case 'n':
+                                case 'q':
+                                    cont = 0;
                                     break;
                             }
                         }
