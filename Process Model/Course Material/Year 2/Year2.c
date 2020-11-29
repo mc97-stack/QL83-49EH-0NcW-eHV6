@@ -70,8 +70,8 @@ void Year2()
                 //printf("Bear with me, this is still being written...\n");
                 break;
             case '6':
-                //B48BD();
-                printf("Bear with me, this is still being written...\n");
+                B48BD();
+                //printf("Bear with me, this is still being written...\n");
                 break;
             case '7':
                 //F18XD();

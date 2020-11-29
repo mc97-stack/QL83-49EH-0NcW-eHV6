@@ -1,0 +1,144 @@
+//
+//  B48BD.c
+//  Process Model
+//
+//  Created by Matthew Cheung on 29/11/2020.
+//  Copyright © 2020 Matthew Cheung. All rights reserved.
+//  
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or 
+//  any later version.
+//  
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//  
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+
+//  Standard header files
+#include <stdio.h>
+#include <stdlib.h>
+
+//  Custom header files
+#include "Courses.h"
+#include "B48BDMenu.h"
+#include "B48BD_T1.h"
+
+#define maxstrlen 128
+
+void B48BDTopComm(){
+    printf("Please select from the following programs: \n");
+}
+
+void B48BDtopic1(){
+    //char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BDTopComm();
+        control = 0;
+    }
+}
+
+void B48BDtopic2(){
+    //char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BDTopComm();
+        control = 0;
+    }
+}
+
+void B48BDtopic3(){
+    //char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BDTopComm();
+        control = 0;
+    }
+}
+
+void B48BDtopic4(){
+    //char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BDTopComm();
+        control = 0;
+    }
+}
+
+void B48BDtopic5(){
+    //char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BDTopComm();
+        control = 0;
+    }
+}
+
+void B48BDtopic6(){
+    //char input[maxstrlen];
+    int control = 0;
+    
+    control = 1;
+    while(control == 1){
+        B48BDTopComm();
+        control = 0;
+    }
+}
+
+void B48BD(){
+    char input[maxstrlen];      // Variable where character input is stored.
+    int control = 0;            // Variable used to control user input.
+    printf("Process Engineering B - Heat Transfer \n\n");
+    
+    control = 1;
+    while(control == 1){
+        printf("Please select from the following topics:\n");
+        printf("T1: Introduction to Heat Transfer\nT2: Thermal Conduction\nT3: Convection and Radiation\nT4: Heat Transfer Equipment\nT5: Heat Exchanger Design\nT6: Boiling and Condensation\n\nq. Quit course\n\n");
+        printf("Topic ");
+        fgets(input,sizeof(input),stdin);
+        switch(input[0]){
+            case '1':
+                B48BDtopic1();
+                break;
+            case '2':
+                B48BDtopic2();
+                break;
+            case '3':
+                B48BDtopic3();
+                break;
+            case '4':
+                B48BDtopic4();
+                break;
+            case '5':
+                B48BDtopic5();
+                break;
+            case '6':
+                B48BDtopic6();
+                break;
+            case '0':
+            case 'Q':
+            case 'q':
+                control = 0;
+                break;
+            default:
+                printf("Input not recognised. Please enter an integer between 1 and 6.\n");
+                break;
+        }
+        fflush(stdout);
+    }
+}

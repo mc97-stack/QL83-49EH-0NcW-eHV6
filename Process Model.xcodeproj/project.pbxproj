@@ -76,6 +76,7 @@
 		E8205803256D146700DA25F0 /* Reading.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205802256D146700DA25F0 /* Reading.c */; };
 		E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
+		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -235,6 +236,9 @@
 		E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 05aEntropyBalance.c; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E899817B25740B9C00D154D6 /* B48BD.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = B48BD.c; sourceTree = "<group>"; };
+		E899817F25740CD700D154D6 /* B48BDMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BDMenu.h; sourceTree = "<group>"; };
+		E899818125740D8C00D154D6 /* B48BD_T1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T1.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +361,7 @@
 			children = (
 				E820576D256ADEE800DA25F0 /* 3. B48BB - Process Engineering A (Fluid Statics and Dynamics) */,
 				E8205743256ADEE700DA25F0 /* 5. B48BC - Process Engineering B (Thermodynamic Processes) */,
+				E899817A25740B6500D154D6 /* 6. B48BD - Process Engineering C (Heat Transfer) */,
 				E820576C256ADEE800DA25F0 /* Year2.c */,
 			);
 			path = "Year 2";
@@ -606,6 +611,24 @@
 			path = "Process Model";
 			sourceTree = "<group>";
 		};
+		E899817A25740B6500D154D6 /* 6. B48BD - Process Engineering C (Heat Transfer) */ = {
+			isa = PBXGroup;
+			children = (
+				E899818025740D7200D154D6 /* Topic 1 */,
+				E899817B25740B9C00D154D6 /* B48BD.c */,
+				E899817F25740CD700D154D6 /* B48BDMenu.h */,
+			);
+			path = "6. B48BD - Process Engineering C (Heat Transfer)";
+			sourceTree = "<group>";
+		};
+		E899818025740D7200D154D6 /* Topic 1 */ = {
+			isa = PBXGroup;
+			children = (
+				E899818125740D8C00D154D6 /* B48BD_T1.h */,
+			);
+			path = "Topic 1";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -672,6 +695,7 @@
 				E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */,
 				E82057C2256ADEE800DA25F0 /* 04cCarnotCycle.c in Sources */,
 				E82057E5256ADEE800DA25F0 /* 01eBubPres.c in Sources */,
+				E899817C25740B9C00D154D6 /* B48BD.c in Sources */,
 				E82057C8256ADEE800DA25F0 /* B48BC.c in Sources */,
 				E82057E7256ADEE800DA25F0 /* 01cMano.c in Sources */,
 				E82057D6256ADEE800DA25F0 /* 03gRotameter.c in Sources */,
