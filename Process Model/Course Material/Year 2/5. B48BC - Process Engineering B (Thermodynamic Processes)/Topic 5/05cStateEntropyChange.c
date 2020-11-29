@@ -280,7 +280,7 @@ void StateEntropyChange(void)
         int method = 0;
         
         double ds = 0.0;    // Entropy change.
-      
+        
         double cp = 0.0;    // Heat capacity at constant pressure.
         double P1 = 0.0;    // Initial and final system pressure.
         double P2 = 0.0;

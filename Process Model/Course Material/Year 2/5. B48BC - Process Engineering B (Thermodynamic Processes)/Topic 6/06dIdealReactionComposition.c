@@ -116,9 +116,32 @@ double SpeciesGibbsEgyCalc(double molestotal, double gibbs, double T, double P, 
     return mu;
 }
 
+double EquilibriumConstantCalc(species products, species reagents, int numprods, int numreags, double T)
+{
+    double K = 0.0;     // Equilibrium constant
+    double sto = 0.0;
+    
+    for(int i = 0; i < numprods; ++i)
+    {
+        sto += (products.stoich[i])*(products.gibbs[i]);
+    }
+    for(int i = 0; i < numreags; ++i)
+    {
+        sto += (reagents.stoich[i])*(reagents.gibbs[i]);
+    }
+    
+    K = R*T;
+    K = (sto)/(K);
+    K = -1*(K);
+    K = exp(K);
+    
+    return K;
+}
+
 /// MARK: ARRAY FUNCTION
 GibbsRxn GibbsMixing(species reagents, species products, int numreags, int numprods, double totalmoles, double totalstoich, double T, double P, double Pref)
 {
+    double sto = 0.0;
     GibbsRxn table = {0.0};
     
     // Initialising the extent of reaction.
@@ -126,7 +149,7 @@ GibbsRxn GibbsMixing(species reagents, species products, int numreags, int numpr
     {
         table.EoR[i] = (double)i/1000;
     }
-    // Loading chemical species compositions
+    // Calculating chemical species compositions
     for(int i = 0; i < 1001; ++i){
         for(int j = 0; j < numreags; ++j)
         {
@@ -168,7 +191,7 @@ GibbsRxn GibbsMixing(species reagents, species products, int numreags, int numpr
             table.Gmix[i] += table.reagsmu[j][i];
         }
     }
-    double sto = 0.0;
+    
     for(int i = 0; i < 1001; ++i){
         for(int j = 0; j < numreags; ++j)
         {
@@ -189,12 +212,11 @@ GibbsRxn GibbsMixing(species reagents, species products, int numreags, int numpr
             sto = 0.0;
         }
     }
-    
     return table;
 }
 
 /// MARK: DISPLAY AND WRITE
-void IdealRxnCompDisplay(species reagents, species products, int numreags, int numprods, double T, double P, double Pref, GibbsRxn results)
+void IdealRxnCompDisplay(species reagents, species products, int numreags, int numprods, double totalmoles, double T, double P, double Pref, GibbsRxn results, double K, double KP, double stoichtotal)
 {
     printf("_Ideal_Reaction_Composition_\n");
     printf("\tInput parameters:\n");
@@ -205,6 +227,13 @@ void IdealRxnCompDisplay(species reagents, species products, int numreags, int n
     printf("P =\t%.3f\tatm\n", P);
     printf("System Temperature:\n");
     printf("T =\t%.3f\tdeg C\n\n", T - 273.15);
+    
+    printf("Total moles present:\n");
+    printf("n =\t%.3f\tmol\n\n", totalmoles);
+    
+    printf("Equilibrium constant:\n");
+    printf("K =\t%.3f\t[ ]\n\n", K);
+    printf("KP =\t%.3f\tbar^%.2f\n\n", KP, stoichtotal);
     
     printf("Reagents stoichiometry:\n");
     for(int i = 0; i < numreags; ++i)
@@ -260,7 +289,7 @@ void IdealRxnCompDisplay(species reagents, species products, int numreags, int n
     }
 }
 
-void IdealRxnCompWrite(species reagents, species products, int numreags, int numprods, double T, double P, double Pref, GibbsRxn results)
+void IdealRxnCompWrite(species reagents, species products, int numreags, int numprods, double totalmoles, double T, double P, double Pref, GibbsRxn results, double K, double KP, double totalstoich)
 {
     //  Function variables
     char filename[maxstrlen];   // Variable used to store the file name as it is built.
@@ -330,6 +359,13 @@ void IdealRxnCompWrite(species reagents, species products, int numreags, int num
     fprintf(fp, "System Temperature:\n");
     fprintf(fp, "T =\t%.3f\tdeg C\n\n", T - 273.15);
     
+    printf("Total moles present:\n");
+    printf("n =\t%.3f\tmol\n\n", totalmoles);
+    
+    fprintf(fp, "Equilibrium constant:\n");
+    fprintf(fp, "K =\t%.3f\t[ ]\n\n", K);
+    fprintf(fp, "KP =\t%.3f\tbar^%.2f\n\n", KP, totalstoich);
+    
     fprintf(fp, "Reagents stoichiometry:\n");
     for(int i = 0; i < numreags; ++i)
     {
@@ -389,7 +425,7 @@ void IdealRxnCompWrite(species reagents, species products, int numreags, int num
     printf("Write Complete\n");
 }
 
-void IdealRxnCompSwitch(int mode, species reagents, species products, int numreags, int numprods, double T, double P, double Pref, GibbsRxn results)
+void IdealRxnCompSwitch(int mode, species reagents, species products, int numreags, int numprods, double totalmoles, double T, double P, double Pref, GibbsRxn results, double K, double KP, double totalstoich)
 {
     int control = 0;
     
@@ -415,11 +451,11 @@ void IdealRxnCompSwitch(int mode, species reagents, species products, int numrea
             case 'y':
                 if(mode == 1)
                 {
-                    IdealRxnCompDisplay(reagents, products, numreags, numprods, T, P, Pref, results);
+                    IdealRxnCompDisplay(reagents, products, numreags, numprods, totalmoles, T, P, Pref, results, K, KP, totalstoich);
                 }
                 if(mode == 2)
                 {
-                    IdealRxnCompWrite(reagents, products, numreags, numprods, T, P, Pref, results);
+                    IdealRxnCompWrite(reagents, products, numreags, numprods, totalmoles, T, P, Pref, results, K, KP, totalstoich);
                 }
                 control = 0;
                 break;
@@ -453,10 +489,11 @@ void IdealReactionCompostion(void)
         int cont = 0;
         
         GibbsRxn *table = calloc(1, sizeof(GibbsRxn));
-        
         double Pref = 0.0;
         double P = 0.0;
         double T = 0.0;
+        double K = 0.0;     // Equilibrium constant (Temperature adjustment).
+        double KP = 0.0;    // Equilibrium constant (Pressure adjustment).
         double stoichtotal = 0.0;
         double molestotal = 0.0;
         
@@ -539,6 +576,10 @@ void IdealReactionCompostion(void)
             }
             *table = GibbsMixing(*reagents, *products, numreags, numprods, molestotal, stoichtotal, T, P, Pref);
             
+            K = EquilibriumConstantCalc(*products, *reagents, numprods, numreags, T);
+            KP = pow(Pref, stoichtotal);
+            KP = (KP)*(K);
+            
             clock_getres(CLOCK_MONOTONIC, &end);
             clock_gettime(CLOCK_MONOTONIC, &end);
 
@@ -547,10 +588,10 @@ void IdealReactionCompostion(void)
             printf("Calculations completed in %.6f seconds.\n", elapsed);
             
             //  Displaying results
-            IdealRxnCompSwitch(1, *reagents, *products, numreags, numprods, T, P, Pref, *table);
+            IdealRxnCompSwitch(1, *reagents, *products, numreags, numprods, molestotal, T, P, Pref, *table, K, KP, stoichtotal);
             
             //  Writing to File
-            IdealRxnCompSwitch(2, *reagents, *products, numreags, numprods, T, P, Pref, *table);
+            IdealRxnCompSwitch(2, *reagents, *products, numreags, numprods, molestotal, T, P, Pref, *table, K, KP, stoichtotal);
             
             control = 1;
             while(control == 1)

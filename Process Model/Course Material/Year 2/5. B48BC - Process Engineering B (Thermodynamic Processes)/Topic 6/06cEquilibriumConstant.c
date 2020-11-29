@@ -308,7 +308,6 @@ void EquilibriumConstant(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-            //  Subroutine behaviour (Delete me when done)
         char input[maxstrlen];
         int control = 0;
         int mode = 0;

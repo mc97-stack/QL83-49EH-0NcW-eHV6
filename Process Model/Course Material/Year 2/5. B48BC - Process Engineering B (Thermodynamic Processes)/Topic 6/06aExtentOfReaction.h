@@ -31,7 +31,7 @@ void EoRVariable(double *reacted, double *stoich);
 #ifndef _6aExtentOfReactionCalculation_h
 #define _6aExtentOfReactionCalculation_h
 
-/// This subroutine is used to calculate and return the extent of reaction to the calling function. 
+/// This subroutine is used to calculate and return the extent of reaction to the calling function.
 /// @param reacted Moles of species i reacted (mol).
 /// @param stoich Stoichiometric coefficient.
 double EoRCalculation(double reacted, double stoich);
@@ -57,5 +57,11 @@ void EoRDisplay(double reacted, double stoich, double EoR);
 /// @param stoich Stoichiometric coefficient.
 /// @param EoR Extent of reaction (mol).
 void EoRWrite(double reacted, double stoich, double EoR);
+
+/// This subroutine is used to ask the user whether or not they would like to write the inputted and calculated parameters to disk.
+/// @param reacted Moles of species i reacted (mol).
+/// @param stoich Stoichiometric coefficient.
+/// @param EoR Extent of reaction (mol).
+void EoRWriteSwitch(double reacted, double stoich, double EoR);
 
 #endif /* _6aExtentOfReactionWrite_h */

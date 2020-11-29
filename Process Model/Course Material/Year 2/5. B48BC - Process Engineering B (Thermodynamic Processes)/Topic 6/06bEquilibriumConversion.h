@@ -39,7 +39,7 @@ void EquiConvVariable(int mode, double *reacted, double *stoich, double *EoR, do
 /// @param initial Moles of species i initially present (mol).
 double EquiConvCalc1(double reacted, double initial);
 
-/// This subroutine is used to calculate and return the equilibrium conversion through the extent of reaction, stoiciometric coefficient and the amount of species i initially present.
+/// This subroutine is used to calculate and return the equilibrium conversion through the extent of reaction, stoichiometric coefficient and the amount of species i initially present.
 /// @param stoich Stoichiometric coefficient.
 /// @param EoR Extent of reaction (mol).
 /// @param initial Moles of species i initially present (mol).

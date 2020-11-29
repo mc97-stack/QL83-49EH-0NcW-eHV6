@@ -48,7 +48,7 @@ typedef struct GibbsRxn{
 /// @param T System temperature (deg C).
 void ReactionVariable(double *P, double *Pref, double *T);
 
-/// This subroutine is used to collect the variables that relate to a reacting species.
+/// This subroutine is used to collect the variables that relate to a chemical species participating in the chemical reaction under analysis.
 /// @param type This integer is used to control whether reagent (1) or product (2) is displayed.
 /// @param initial Initial moles of reagent or product present.
 /// @param stoich Stoichiometric coefficient.
@@ -77,6 +77,14 @@ double CompositionCalculation(double species, double total, double stoich, doubl
 /// @param comp Molar composition of species i.
 double SpeciesGibbsEgyCalc(double molestotal, double gibbs, double T, double P, double Pref, double comp);
 
+/// This subroutine is used to calculate the equilibrium constant for a reacting ideal gas mixture.
+/// @param products This struct contains the information required for any product species within the reacting mixture.
+/// @param reagents This struct contains the information required for any reagent species within the reacting mixture.
+/// @param numprods Number of products present in the multicomponent mixture.
+/// @param numreags Number of reagents present in the multicomponent mixture.
+/// @param T System temperature.
+double EquilibriumConstantCalc(species products, species reagents, int numprods, int numreags, double T);
+
 /// This subroutine is used to calculate the Gibbs free energy of mixing for a reacting ideal gas mixture.
 /// @param reagents This struct contains the information required for any reagent species within the reacting mixture.
 /// @param products This struct contains the information required for any product species within the reacting mixture.
@@ -99,11 +107,15 @@ GibbsRxn GibbsMixing(species reagents, species products, int numreags, int numpr
 /// @param products This struct contains the information required for any product species within the reacting mixture.
 /// @param numreags Number of reagents present.
 /// @param numprods Number of products present.
+/// @param totalmoles Total moles in the reacting mixture (mol).
 /// @param T System temperature (K).
 /// @param P System pressure (atm).
 /// @param Pref Reference pressure (atm).
 /// @param results This struct contains the calculation table for the Gibbs free energy of mixing.
-void IdealRxnCompDisplay(species reagents, species products, int numreags, int numprods, double T, double P, double Pref, GibbsRxn results);
+/// @param K Temperature adjusted equilibrium constant.
+/// @param KP Temperature adjusted equilibrium constant.
+/// @param totalstoich Overall stoichiometric coefficient.
+void IdealRxnCompDisplay(species reagents, species products, int numreags, int numprods, double totalmoles, double T, double P, double Pref, GibbsRxn results, double K, double KP, double totalstoich);
 
 #endif /* _6dIdealReactionCompositionDisplay_h */
 
@@ -115,11 +127,15 @@ void IdealRxnCompDisplay(species reagents, species products, int numreags, int n
 /// @param products This struct contains the information required for any product species within the reacting mixture.
 /// @param numreags Number of reagents present.
 /// @param numprods Number of products present.
+/// @param totalmoles Total moles in the reacting mixture (mol).
 /// @param T System temperature (K).
 /// @param P System pressure (atm).
 /// @param Pref Reference pressure (atm).
 /// @param results This struct contains the calculation table for the Gibbs free energy of mixing.
-void IdealRxnCompWrite(species reagents, species products, int numreags, int numprods, double T, double P, double Pref, GibbsRxn results);
+/// @param K Temperature adjusted equilibrium constant.
+/// @param KP Temperature adjusted equilibrium constant.
+/// @param totalstoich Overall stoichiometric coefficient.
+void IdealRxnCompWrite(species reagents, species products, int numreags, int numprods, double totalmoles, double T, double P, double Pref, GibbsRxn results, double K, double KP, double totalstoich);
 
 /// This subroutine is used to ask the user whether or not they would like to display/write the gathered data to the user console/disk.
 /// @param mode This integer variable is used to control whether the inputted and calculated parameters are either displayed on the user console (1) or written to disk (2).
@@ -127,10 +143,14 @@ void IdealRxnCompWrite(species reagents, species products, int numreags, int num
 /// @param products This struct contains the information required for any product species within the reacting mixture.
 /// @param numreags Number of reagents present.
 /// @param numprods Number of products present.
+/// @param totalmoles Total moles in the reacting mixture (mol).
 /// @param T System temperature (K).
 /// @param P System pressure (atm).
 /// @param Pref Reference pressure (atm).
 /// @param results This struct contains the calculation table for the Gibbs free energy of mixing.
-void IdealRxnCompSwitch(int mode, species reagents, species products, int numreags, int numprods, double T, double P, double Pref, GibbsRxn results);
+/// @param K Temperature adjusted equilibrium constant.
+/// @param KP Temperature adjusted equilibrium constant.
+/// @param totalstoich Overall stoichiometric coefficient.
+void IdealRxnCompSwitch(int mode, species reagents, species products, int numreags, int numprods, double totalmoles, double T, double P, double Pref, GibbsRxn results, double K, double KP, double totalstoich);
 
 #endif /* _6dIdealReactionCompositionWrite_h */
