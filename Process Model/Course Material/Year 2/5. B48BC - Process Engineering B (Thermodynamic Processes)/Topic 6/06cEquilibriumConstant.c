@@ -312,15 +312,15 @@ void EquilibriumConstant(void)
         int control = 0;
         int mode = 0;
         
-        double K2 = 0.0;
-        double KP = 0.0;
+        double K2 = 0.0;        // Temperature adjusted equilibrium constant.
+        double KP = 0.0;        // Pressure adjusted equilibrium constant.
         
-        double h_rxn = 0.0;
-        double T1 = 0.0;
-        double T2 = 0.0;
-        double K1 = 0.0;
-        double P1 = 0.0;
-        double stoich = 0.0;
+        double h_rxn = 0.0;     // Enthalpy change of reaction.
+        double T1 = 0.0;        // Reference temperature.
+        double T2 = 0.0;        // System temperature.
+        double K1 = 0.0;        // Reference equilibrium constant.
+        double P1 = 0.0;        // Reference pressure.
+        double stoich = 0.0;    // Overall stoichiometric coefficient.
             //  Variables for timing function
         struct timespec start, end;
         double elapsed = 0.0;

@@ -178,12 +178,12 @@ void ExtentOfReaction(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-        int hold = 0;
+        int hold = 0;           // Variable used to store the absolute value of the stoichiometric coefficient.
         
-        double EoR = 0.0;
+        double EoR = 0.0;       // Extent of reaction.
         
-        double reacted = 0.0;
-        double stoich = 0;
+        double reacted = 0.0;   // Moles consumed by the reaction.
+        double stoich = 0;      // Stoichiometric coefficient.
             //  Variables for timing function
         struct timespec start, end;
         double elapsed = 0.0;

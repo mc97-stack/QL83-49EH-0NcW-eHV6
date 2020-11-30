@@ -256,12 +256,12 @@ void EquilibriumConversion(void)
         int control = 0;
         int mode = 0;
         
-        double EquiConv = 0.0;
+        double EquiConv = 0.0;      // Equilibrium conversion.
         
-        double reacted = 0.0;
-        double stoich = 0.0;
-        double EoR = 0.0;
-        double initial = 0.0;
+        double reacted = 0.0;       // Moles consumed by reaction.
+        double stoich = 0.0;        // Stoichiometric coefficient.
+        double EoR = 0.0;           // Extent of Reaction.
+        double initial = 0.0;       // Amount of substance initially available to reaction.
             //  Variables for timing function
         struct timespec start, end;
         double elapsed = 0.0;

@@ -488,13 +488,13 @@ void IdealReactionCompostion(void)
         int cont = 0;
         
         GibbsRxn *table = calloc(1, sizeof(GibbsRxn));
-        double Pref = 0.0;
-        double P = 0.0;
-        double T = 0.0;
-        double K = 0.0;     // Equilibrium constant (Temperature adjustment).
-        double KP = 0.0;    // Equilibrium constant (Pressure adjustment).
-        double stoichtotal = 0.0;
-        double molestotal = 0.0;
+        double Pref = 0.0;          // Reference pressure.
+        double P = 0.0;             // System pressure.
+        double T = 0.0;             // System temperature.
+        double K = 0.0;             // Equilibrium constant (Temperature adjustment).
+        double KP = 0.0;            // Equilibrium constant (Pressure adjustment).
+        double stoichtotal = 0.0;   // Overall stoichiometric coefficient.
+        double molestotal = 0.0;    // Total moles present in the system.
         
         int numreags = 0;   // Number of reagents.
         int numprods = 0;   // Number of products.
