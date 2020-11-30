@@ -191,7 +191,6 @@ GibbsRxn GibbsMixing(species reagents, species products, int numreags, int numpr
             table.Gmix[i] += table.reagsmu[j][i];
         }
     }
-    
     for(int i = 0; i < 1001; ++i){
         for(int j = 0; j < numreags; ++j)
         {
