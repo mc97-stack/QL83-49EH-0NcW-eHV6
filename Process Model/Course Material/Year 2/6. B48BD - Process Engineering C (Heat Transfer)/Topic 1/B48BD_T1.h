@@ -22,5 +22,16 @@
 #ifndef B48BD_T1_h
 #define B48BD_T1_h
 
+/// This subroutine is used to guide the user through converting temperature measurements to different scales.
+void TemperatureConversion(void);
+
+/// This subroutine is used to guide the user through calculating the heat transfer by conduction using Fourier's law.
+void Conduction(void);
+
+/// This subroutine is used to guide the user through calculating the heat transfer by convection using the steady-state heat convection law.
+void Convection(void);
+
+/// This subroutine is used to guide the user through calculating the heat transfer by radiation using the Stefan-Boltzmann law.
+void Radiation(void);
 
 #endif /* B48BC_T1_h */

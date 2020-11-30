@@ -75,6 +75,10 @@
 		E82057FF256D140E00DA25F0 /* ThermophysicalProperties.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057FE256D140E00DA25F0 /* ThermophysicalProperties.c */; };
 		E8205803256D146700DA25F0 /* Reading.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205802256D146700DA25F0 /* Reading.c */; };
 		E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */; };
+		E83C6CE7257568850018B6D8 /* 01aTemperatureConversion.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CDF257568830018B6D8 /* 01aTemperatureConversion.c */; };
+		E83C6CE8257568850018B6D8 /* 01bConduction.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE0257568830018B6D8 /* 01bConduction.c */; };
+		E83C6CE9257568850018B6D8 /* 01cConvection.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE2257568840018B6D8 /* 01cConvection.c */; };
+		E83C6CEA257568850018B6D8 /* 01dRadiation.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE3257568840018B6D8 /* 01dRadiation.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
 		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
 /* End PBXBuildFile section */
@@ -234,6 +238,14 @@
 		E8205805256D161600DA25F0 /* Reading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reading.h; sourceTree = "<group>"; };
 		E8205807256D1B1200DA25F0 /* 05aEntropyBalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 05aEntropyBalance.h; sourceTree = "<group>"; };
 		E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 05aEntropyBalance.c; sourceTree = "<group>"; };
+		E83C6CDF257568830018B6D8 /* 01aTemperatureConversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 01aTemperatureConversion.c; sourceTree = "<group>"; };
+		E83C6CE0257568830018B6D8 /* 01bConduction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 01bConduction.c; sourceTree = "<group>"; };
+		E83C6CE1257568830018B6D8 /* 01dRadiation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01dRadiation.h; sourceTree = "<group>"; };
+		E83C6CE2257568840018B6D8 /* 01cConvection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 01cConvection.c; sourceTree = "<group>"; };
+		E83C6CE3257568840018B6D8 /* 01dRadiation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 01dRadiation.c; sourceTree = "<group>"; };
+		E83C6CE4257568840018B6D8 /* 01aTemperatureConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01aTemperatureConversion.h; sourceTree = "<group>"; };
+		E83C6CE5257568850018B6D8 /* 01cConvection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01cConvection.h; sourceTree = "<group>"; };
+		E83C6CE6257568850018B6D8 /* 01bConduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01bConduction.h; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		E899817B25740B9C00D154D6 /* B48BD.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = B48BD.c; sourceTree = "<group>"; };
@@ -624,6 +636,14 @@
 		E899818025740D7200D154D6 /* Topic 1 */ = {
 			isa = PBXGroup;
 			children = (
+				E83C6CDF257568830018B6D8 /* 01aTemperatureConversion.c */,
+				E83C6CE4257568840018B6D8 /* 01aTemperatureConversion.h */,
+				E83C6CE0257568830018B6D8 /* 01bConduction.c */,
+				E83C6CE6257568850018B6D8 /* 01bConduction.h */,
+				E83C6CE2257568840018B6D8 /* 01cConvection.c */,
+				E83C6CE5257568850018B6D8 /* 01cConvection.h */,
+				E83C6CE3257568840018B6D8 /* 01dRadiation.c */,
+				E83C6CE1257568830018B6D8 /* 01dRadiation.h */,
 				E899818125740D8C00D154D6 /* B48BD_T1.h */,
 			);
 			path = "Topic 1";
@@ -702,12 +722,14 @@
 				E82057E1256ADEE800DA25F0 /* 02gLamVelPro.c in Sources */,
 				E82057D7256ADEE800DA25F0 /* 03cHydrDiam.c in Sources */,
 				E82057D4256ADEE800DA25F0 /* 03dTwoK.c in Sources */,
+				E83C6CE8257568850018B6D8 /* 01bConduction.c in Sources */,
 				E82057E0256ADEE800DA25F0 /* 02bEnerCon.c in Sources */,
 				E8010C5F256FADF800697DB6 /* 06aExtentOfReaction.c in Sources */,
 				E82057E4256ADEE800DA25F0 /* 01bFluidVHyd.c in Sources */,
 				E82057C3256ADEE800DA25F0 /* 04bCoefficientofPerformance.c in Sources */,
 				E82057BE256ADEE800DA25F0 /* 03aJTEffect.c in Sources */,
 				E812AA17256D29E00029DF78 /* 05bEngineEntropyBalance.c in Sources */,
+				E83C6CE9257568850018B6D8 /* 01cConvection.c in Sources */,
 				E82057C7256ADEE800DA25F0 /* 02bPolyShaftWork.c in Sources */,
 				E82057DD256ADEE800DA25F0 /* 02cBernEqn.c in Sources */,
 				E82057BA256ADEE800DA25F0 /* IdealGasLaw.c in Sources */,
@@ -731,6 +753,7 @@
 				E82057CD256ADEE800DA25F0 /* 01bIsothermal.c in Sources */,
 				E82057C6256ADEE800DA25F0 /* 02cOpenFirstLaw.c in Sources */,
 				E82057B3256ADEE800DA25F0 /* 03CubicEOSConstants.c in Sources */,
+				E83C6CE7257568850018B6D8 /* 01aTemperatureConversion.c in Sources */,
 				E82057DC256ADEE800DA25F0 /* 02fViscCorr.c in Sources */,
 				E82057D3256ADEE800DA25F0 /* 03fOrifice.c in Sources */,
 				E82057BC256ADEE800DA25F0 /* Year4.c in Sources */,
@@ -739,6 +762,7 @@
 				E82057CA256ADEE800DA25F0 /* 01aPolytropic.c in Sources */,
 				E82057B8256ADEE800DA25F0 /* 01aAcentricFactor.c in Sources */,
 				E82057E3256ADEE800DA25F0 /* 02g0VelProfileMenu.c in Sources */,
+				E83C6CEA257568850018B6D8 /* 01dRadiation.c in Sources */,
 				E82057B7256ADEE800DA25F0 /* 02PVTRelations.c in Sources */,
 				E82057C1256ADEE800DA25F0 /* 04aThermalEfficiency.c in Sources */,
 				E82057DF256ADEE800DA25F0 /* 02dReyNo.c in Sources */,
@@ -875,7 +899,8 @@
 		E86E6CB1256ACE9D004B9493 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Process Model/Process Model.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2R77NGC7T;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -886,7 +911,8 @@
 		E86E6CB2256ACE9D004B9493 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Process Model/Process Model.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2R77NGC7T;
 				ENABLE_HARDENED_RUNTIME = YES;

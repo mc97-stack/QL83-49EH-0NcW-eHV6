@@ -35,13 +35,43 @@ void B48BDTopComm(){
 }
 
 void B48BDtopic1(){
-    //char input[maxstrlen];
+    char input[maxstrlen];
     int control = 0;
     
     control = 1;
     while(control == 1){
         B48BDTopComm();
-        control = 0;
+        printf("1. Temperature conversion.\n");
+        printf("2. Heat transfer by conduction.\n");
+        printf("3. Heat transfer by convection.\n");
+        printf("4. Heat transfer by radiation.\n\n");
+        
+        printf("q. Exit topic.\n");
+        printf("Selection [1 - 4]: ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+                TemperatureConversion();
+                break;
+            case '2':
+                Conduction();
+                break;
+            case '3':
+                Convection();
+                break;
+            case '4':
+                Radiation();
+                break;
+            case '0':
+            case 'Q':
+            case 'q':
+                control = 0;
+                break;
+            default:
+                printf("Input not recognised. Please enter an integer value between 1 and 4.\n");
+                break;
+        }
     }
 }
 
