@@ -47,7 +47,7 @@ void ThermRadiationVariable(double *A, double *Ts, double *Tf)
     *Tf = CelsiusKelvin(*Tf);
 }
 
-double StefanBoltzmannConstant()
+double StefanBoltzmannConstant(void)
 {
     double sto = 0.0;
     

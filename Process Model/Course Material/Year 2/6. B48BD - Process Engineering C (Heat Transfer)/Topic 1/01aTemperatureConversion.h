@@ -31,27 +31,27 @@ void TempConvVariable(int mode, double *temp);
 #ifndef _1aTemperatureConversionCalculation_h
 #define _1aTemperatureConversionCalculation_h
 
-/// This subroutine is used to convert degrees celsius to degrees fahrenheit.
+/// This subroutine is used to convert degrees Celsius to degrees Fahrenheit.
 /// @param temp Temperature (deg C).
 double CelsiusFahrenheitConv(double temp);
 
-/// This subroutine is used to convert degrees fahrenheit to degrees celsius.
+/// This subroutine is used to convert degrees Fahrenheit to degrees celsius.
 /// @param temp Temperature (deg F).
 double FahrenheitCelsiusConv(double temp);
 
-/// This subroutine is used to convert degrees celsius to Kelvin.
+/// This subroutine is used to convert degrees Celsius to Kelvin.
 /// @param temp Temperature (deg C).
 double CelsiusKelvin(double temp);
 
-/// This subroutine is used to convert Kelvin to degrees to celsius.
+/// This subroutine is used to convert Kelvin to degrees to Celsius.
 /// @param temp Temperature (K).
 double KelvinCelsius(double temp);
 
-/// This subroutine is used to convert degrees fahrenheit to Rankine.
+/// This subroutine is used to convert degrees Fahrenheit to Rankine.
 /// @param temp Temperature (deg F).
 double FahrenheitRankine(double temp);
 
-/// This subroutine is used to convert Rankine to degrees fahrenheit.
+/// This subroutine is used to convert Rankine to degrees Fahrenheit.
 /// @param temp Temperature (R).
 double RankineFahrenheit(double temp);
 
