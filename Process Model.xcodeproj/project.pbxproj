@@ -246,6 +246,7 @@
 		E83C6CE4257568840018B6D8 /* 01aTemperatureConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01aTemperatureConversion.h; sourceTree = "<group>"; };
 		E83C6CE5257568850018B6D8 /* 01cConvection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01cConvection.h; sourceTree = "<group>"; };
 		E83C6CE6257568850018B6D8 /* 01bConduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01bConduction.h; sourceTree = "<group>"; };
+		E85E98BD2576E6E30046DD63 /* B48BD_T2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T2.h; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		E899817B25740B9C00D154D6 /* B48BD.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = B48BD.c; sourceTree = "<group>"; };
@@ -594,6 +595,14 @@
 			path = Reading;
 			sourceTree = "<group>";
 		};
+		E85E98BC2576E6B20046DD63 /* Topic 2 */ = {
+			isa = PBXGroup;
+			children = (
+				E85E98BD2576E6E30046DD63 /* B48BD_T2.h */,
+			);
+			path = "Topic 2";
+			sourceTree = "<group>";
+		};
 		E86E6CA0256ACE9D004B9493 = {
 			isa = PBXGroup;
 			children = (
@@ -626,9 +635,10 @@
 		E899817A25740B6500D154D6 /* 6. B48BD - Process Engineering C (Heat Transfer) */ = {
 			isa = PBXGroup;
 			children = (
-				E899818025740D7200D154D6 /* Topic 1 */,
 				E899817B25740B9C00D154D6 /* B48BD.c */,
 				E899817F25740CD700D154D6 /* B48BDMenu.h */,
+				E899818025740D7200D154D6 /* Topic 1 */,
+				E85E98BC2576E6B20046DD63 /* Topic 2 */,
 			);
 			path = "6. B48BD - Process Engineering C (Heat Transfer)";
 			sourceTree = "<group>";
