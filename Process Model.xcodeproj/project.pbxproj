@@ -79,12 +79,8 @@
 		E83C6CE8257568850018B6D8 /* 01bConduction.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE0257568830018B6D8 /* 01bConduction.c */; };
 		E83C6CE9257568850018B6D8 /* 01cConvection.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE2257568840018B6D8 /* 01cConvection.c */; };
 		E83C6CEA257568850018B6D8 /* 01dRadiation.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE3257568840018B6D8 /* 01dRadiation.c */; };
-		E85E98C02577E5460046DD63 /* 02aCompositePlane.c in Sources */ = {isa = PBXBuildFile; fileRef = E85E98BF2577E5460046DD63 /* 02aCompositePlane.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
-		E8974615257BC95E00C3DE51 /* 02dCompositePipe.c in Sources */ = {isa = PBXBuildFile; fileRef = E8974614257BC95E00C3DE51 /* 02dCompositePipe.c */; };
 		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
-		E8F2D1F325781B72000A01A5 /* 02bCompositeCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */; };
-		E8F2D1F825783CDC000A01A5 /* 02cCompositeSphere.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F725783CDC000A01A5 /* 02cCompositeSphere.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
