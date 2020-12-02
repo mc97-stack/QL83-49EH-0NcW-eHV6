@@ -98,7 +98,7 @@ void B48BDtopic2(){
                 CompositePlane();
                 break;
             case '2':
-                //CompositeCylinder();
+                CompositeCylinder();
                 break;
             case '3':
                 //CompositeSphere();

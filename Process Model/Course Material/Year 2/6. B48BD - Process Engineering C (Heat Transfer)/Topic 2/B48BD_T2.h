@@ -24,7 +24,7 @@
 
 typedef struct B48BDTemps {     // Allows for 20 composite layers with 250 elements.
     double k[5000];     // Thermal conductivity present.
-    double x[5000];     // Thickness into composite.
+    double x[5000];     // Linear/Radial thickness into composite.
     double T[5000];     // Temperature (K).
 } B48BDTemps;
 
