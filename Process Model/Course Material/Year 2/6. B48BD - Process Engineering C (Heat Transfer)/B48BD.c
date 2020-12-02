@@ -27,6 +27,7 @@
 #include "Courses.h"
 #include "B48BDMenu.h"
 #include "B48BD_T1.h"
+#include "B48BD_T2.h"
 
 #define maxstrlen 128
 
@@ -94,7 +95,7 @@ void B48BDtopic2(){
         switch(input[0])
         {
             case '1':
-                //CompositePlane();
+                CompositePlane();
                 break;
             case '2':
                 //CompositeCylinder();
