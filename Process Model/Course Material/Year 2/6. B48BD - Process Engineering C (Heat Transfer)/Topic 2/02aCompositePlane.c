@@ -93,7 +93,7 @@ int InterfaceLocater(int medium_ID)
 }
 
 /// MARK: ARRAY FUNCTION
-B48BDTemps CompPlaneCalculation(int numMediums, CondMedium data, double Q, double A, double T1, int *rowsused)
+B48BDTemps CompPlaneCalculation(int numMediums, CondPlaneMedium data, double Q, double A, double T1, int *rowsused)
 {
     B48BDTemps profile = {0.0};
     int i = 0;
@@ -134,7 +134,7 @@ B48BDTemps CompPlaneCalculation(int numMediums, CondMedium data, double Q, doubl
 }
 
 /// MARK: DISPLAY AND WRITE
-void CompPlaneDisplay(int numMediums, CondMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile)
+void CompPlaneDisplay(int numMediums, CondPlaneMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile)
 {
     printf("_Composite_Plane_Results_\n");
     printf("\tInput parameters:\n");
@@ -179,7 +179,7 @@ void CompPlaneDisplay(int numMediums, CondMedium data, double Q, double A, doubl
     }
 }
 
-void CompPlaneWrite(int numMediums, CondMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile)
+void CompPlaneWrite(int numMediums, CondPlaneMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile)
 {
     //  Function variables
     char filename[maxstrlen];   // Variable used to store the file name as it is built.
@@ -280,7 +280,7 @@ void CompPlaneWrite(int numMediums, CondMedium data, double Q, double A, double 
     printf("Write Complete\n");
 }
 
-void CompPlaneSwitch(int mode, int numMediums, CondMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile)
+void CompPlaneSwitch(int mode, int numMediums, CondPlaneMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile)
 {
     int control = 0;
     
@@ -346,7 +346,7 @@ void CompositePlane(void)
         double T1 = 0.0;
         double T2 = 0.0;
         double A = 0.0;
-        CondMedium *data = calloc(1, sizeof(CondMedium));
+        CondPlaneMedium *data = calloc(1, sizeof(CondPlaneMedium));
             //  Variables for timing function
         struct timespec start, end;
         double elapsed = 0.0;

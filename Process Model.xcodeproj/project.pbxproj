@@ -82,6 +82,7 @@
 		E85E98C02577E5460046DD63 /* 02aCompositePlane.c in Sources */ = {isa = PBXBuildFile; fileRef = E85E98BF2577E5460046DD63 /* 02aCompositePlane.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
 		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
+		E8F2D1F325781B72000A01A5 /* 02bCompositeCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -255,6 +256,8 @@
 		E899817B25740B9C00D154D6 /* B48BD.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = B48BD.c; sourceTree = "<group>"; };
 		E899817F25740CD700D154D6 /* B48BDMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BDMenu.h; sourceTree = "<group>"; };
 		E899818125740D8C00D154D6 /* B48BD_T1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T1.h; sourceTree = "<group>"; };
+		E8F2D1F125781B72000A01A5 /* 02bCompositeCylinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 02bCompositeCylinder.h; sourceTree = "<group>"; };
+		E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 02bCompositeCylinder.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -603,6 +606,8 @@
 			children = (
 				E85E98BF2577E5460046DD63 /* 02aCompositePlane.c */,
 				E85E98BE2577E5460046DD63 /* 02aCompositePlane.h */,
+				E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */,
+				E8F2D1F125781B72000A01A5 /* 02bCompositeCylinder.h */,
 				E85E98BD2576E6E30046DD63 /* B48BD_T2.h */,
 			);
 			path = "Topic 2";
@@ -788,6 +793,7 @@
 				E812AA1D256D55E60029DF78 /* 05cStateEntropyChange.c in Sources */,
 				E82057CB256ADEE800DA25F0 /* 01eAdiabatic.c in Sources */,
 				E82057EB256ADEE800DA25F0 /* Year1.c in Sources */,
+				E8F2D1F325781B72000A01A5 /* 02bCompositeCylinder.c in Sources */,
 				E82057BD256ADEE800DA25F0 /* Year3.c in Sources */,
 				E82057E6256ADEE800DA25F0 /* 01fCapp.c in Sources */,
 				E82057D8256ADEE800DA25F0 /* 03dThreeK.c in Sources */,

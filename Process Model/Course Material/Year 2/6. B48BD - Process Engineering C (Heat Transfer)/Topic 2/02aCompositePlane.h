@@ -21,11 +21,11 @@
 #ifndef _2aCompositePlaneVariable_h
 #define _2aCompositePlaneVariable_h
 
-typedef struct CondMedium {
+typedef struct CondPlaneMedium {
     double k[20];   // Thermal conductivity.
     double x[20];   // Plane thickness.
     double R[20];   // Layer resistance to heat transfer.
-} CondMedium;
+} CondPlaneMedium;
 
 /// This subroutine is used to collect the variables regarding the general system being analysed.
 /// @param T1 Hot surface temperature (deg C).

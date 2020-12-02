@@ -22,12 +22,6 @@
 #ifndef B48BD_T2_DATA_h
 #define B48BD_T2_DATA_h
 
-typedef struct heatmedium {
-    double k[20];   // Thermal conductivity.
-    double x[20];   // Plane thickness.
-    double R[20];   // Layer resistance to heat transfer.
-} heatmedium;
-
 typedef struct B48BDTemps {     // Allows for 20 composite layers with 250 elements.
     double k[5000];     // Thermal conductivity present.
     double x[5000];     // Thickness into composite.
