@@ -101,7 +101,7 @@ void B48BDtopic2(){
                 CompositeCylinder();
                 break;
             case '3':
-                //CompositeSphere();
+                CompositeSphere();
                 break;
             case '4':
                 //CompositePipe();

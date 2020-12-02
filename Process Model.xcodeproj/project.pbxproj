@@ -83,6 +83,7 @@
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
 		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
 		E8F2D1F325781B72000A01A5 /* 02bCompositeCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */; };
+		E8F2D1F825783CDC000A01A5 /* 02cCompositeSphere.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F725783CDC000A01A5 /* 02cCompositeSphere.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -258,6 +259,8 @@
 		E899818125740D8C00D154D6 /* B48BD_T1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T1.h; sourceTree = "<group>"; };
 		E8F2D1F125781B72000A01A5 /* 02bCompositeCylinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 02bCompositeCylinder.h; sourceTree = "<group>"; };
 		E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 02bCompositeCylinder.c; sourceTree = "<group>"; };
+		E8F2D1F625783CDC000A01A5 /* 02cCompositeSphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 02cCompositeSphere.h; sourceTree = "<group>"; };
+		E8F2D1F725783CDC000A01A5 /* 02cCompositeSphere.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 02cCompositeSphere.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -608,6 +611,8 @@
 				E85E98BE2577E5460046DD63 /* 02aCompositePlane.h */,
 				E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */,
 				E8F2D1F125781B72000A01A5 /* 02bCompositeCylinder.h */,
+				E8F2D1F725783CDC000A01A5 /* 02cCompositeSphere.c */,
+				E8F2D1F625783CDC000A01A5 /* 02cCompositeSphere.h */,
 				E85E98BD2576E6E30046DD63 /* B48BD_T2.h */,
 			);
 			path = "Topic 2";
@@ -739,6 +744,7 @@
 				E82057C8256ADEE800DA25F0 /* B48BC.c in Sources */,
 				E85E98C02577E5460046DD63 /* 02aCompositePlane.c in Sources */,
 				E82057E7256ADEE800DA25F0 /* 01cMano.c in Sources */,
+				E8F2D1F825783CDC000A01A5 /* 02cCompositeSphere.c in Sources */,
 				E82057D6256ADEE800DA25F0 /* 03gRotameter.c in Sources */,
 				E82057E1256ADEE800DA25F0 /* 02gLamVelPro.c in Sources */,
 				E82057D7256ADEE800DA25F0 /* 03cHydrDiam.c in Sources */,
