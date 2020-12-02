@@ -101,35 +101,31 @@ B48BDTemps CompPlaneCalculation(int numMediums, CondPlaneMedium data, double Q, 
     int count = 0;      // Counter for the number of rows generated.
     int rownum = 0;     // Variable used to deal with changing locations.
     
+    interval = data.x[0]/249;
+    
     for(int j = 0; j < numMediums; ++j){
-        rownum = InterfaceLocater(j);
-        interval = data.x[j]/250;
+        rownum = PlaneInterfaceLocater(j);
+        
         for(i = 0; i < 250; ++i)
         {
-            int locstore = 0.0;
+            int locstore = 0;
             double dx = 0.0;
             locstore = rownum + i;
             
-            profile.k[locstore] = data.k[j];
+            profile.k[locstore - 1] = data.k[j];
             if(i == 0 && j == 0){   // Setting the initial values.
                 profile.x[locstore] = 0.0;
                 profile.T[locstore] = T1;
             }else{
                 profile.x[locstore] = profile.x[locstore - 1] + interval;
                 dx = profile.x[locstore] - profile.x[locstore - 1];
-                profile.T[locstore] = TempCalculation(profile.T[locstore - 1], dx, data.k[j], A, Q);
-            }
-            if(i == 249 && (j + 1) == numMediums)
-            {
-                profile.x[locstore+1] = profile.x[locstore] + interval;
-                dx = profile.x[locstore+1] - profile.x[locstore];
-                profile.T[locstore+1] = TempCalculation(profile.T[locstore], dx, data.k[j], A, Q);
+                profile.T[locstore] = PlaneTempCalculation(profile.T[locstore - 1], dx, data.k[j], A, Q);
             }
             ++count;
         }
-        
+        interval = data.x[j+1]/250;
     }
-    *rowsused = count + 1;
+    *rowsused = count;
     return profile;
 }
 
@@ -378,10 +374,10 @@ void CompositePlane(void)
         // Calculation function(s)
         for(int i = 0; i < numMediums; ++i)
         {
-            data->R[i] = ResistanceCalculation(data->k[i], A, data->x[i]);
+            data->R[i] = PlaneResistanceCalculation(data->k[i], A, data->x[i]);
             TotResist += data->R[i];
         }
-        Q = HeatCalculation(TotResist, T1, T2);
+        Q = PlaneHeatCalculation(TotResist, T1, T2);
         
         *profile = CompPlaneCalculation(numMediums, *data, Q, A, T1, &rowsused);
         

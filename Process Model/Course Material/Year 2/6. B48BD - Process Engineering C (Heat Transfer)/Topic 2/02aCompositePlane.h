@@ -74,7 +74,7 @@ int PlaneInterfaceLocater(int medium_ID);
 /// @param A Area of the heat transfer surface (m2).
 /// @param T1 Temperature of the hot surface (K).
 /// @param rowsused Number of rows generated within the profile.
-B48BDTemps CompPlaneCalculation(int numMediums, heatmedium data, double Q, double A, double T1, int *rowsused);
+B48BDTemps CompPlaneCalculation(int numMediums, CondPlaneMedium data, double Q, double A, double T1, int *rowsused);
 
 #endif /* _2aCompositePlaneCalculation_h */
 
@@ -90,7 +90,7 @@ B48BDTemps CompPlaneCalculation(int numMediums, heatmedium data, double Q, doubl
 /// @param T2 Temperature of the cold surface (K).
 /// @param rowsused Number of rows generated within the profile.
 /// @param profile Struct used to store the generated temperature profile.
-void CompPlaneDisplay(int numMediums, heatmedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile);
+void CompPlaneDisplay(int numMediums, CondPlaneMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile);
 
 #endif /* _2aCompositePlaneDisplay_h */
 
@@ -106,7 +106,7 @@ void CompPlaneDisplay(int numMediums, heatmedium data, double Q, double A, doubl
 /// @param T2 Temperature of the cold surface (K).
 /// @param rowsused Number of rows generated within the profile.
 /// @param profile Struct used to store the generated temperature profile.
-void CompPlaneWrite(int numMediums, heatmedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile);
+void CompPlaneWrite(int numMediums, CondPlaneMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile);
 
 /// This subroutine is used to ask the user whether or not they would like to display/ write the inputted and calculated parameters on the user console/to disk.
 /// @param mode Integer value used to control whether data is displayed on the console (1) or written to disk (2).
@@ -118,6 +118,6 @@ void CompPlaneWrite(int numMediums, heatmedium data, double Q, double A, double 
 /// @param T2 Temperature of the cold surface (K).
 /// @param rowsused Number of rows generated within the profile.
 /// @param profile Struct used to store the generated temperature profile.
-void CompPlaneSwitch(int mode, int numMediums, heatmedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile);
+void CompPlaneSwitch(int mode, int numMediums, CondPlaneMedium data, double Q, double A, double T1, double T2, double rowsused, B48BDTemps profile);
 
 #endif /* _2aCompositePlaneWrite_h */
