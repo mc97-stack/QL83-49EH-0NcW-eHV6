@@ -47,13 +47,13 @@ void CompPlaneIntVariable(double *k, double *x);
 /// @param k Thermal conductivity (W/m.K)
 /// @param A Heat transfer area (m2).
 /// @param x Layer thickness (m).
-double ResistanceCalculation(double k, double A, double x);
+double PlaneResistanceCalculation(double k, double A, double x);
 
 /// This subroutine is used to calculate the rate of heat transfer through the entire system under analysis.
 /// @param R Resistance to heat transfer (K/W).
 /// @param T1 Hot surface temperature (K).
 /// @param T2 Cold surface temperature (K).
-double HeatCalculation(double R, double T1, double T2);
+double PlaneHeatCalculation(double R, double T1, double T2);
 
 /// This subroutine is used to calculate the interface temperature for a composite wall.
 /// @param T1 Temperature on the hot side of the composite (K).
@@ -61,11 +61,11 @@ double HeatCalculation(double R, double T1, double T2);
 /// @param k Thermal conductivity of composite material (W/m.K).
 /// @param A Heat transfer area (m2).
 /// @param Q Rate of heat transfer (W).
-double TempCalculation(double T1, double x, double k, double A, double Q);
+double PlaneTempCalculation(double T1, double x, double k, double A, double Q);
 
 /// This subroutine is used to find the location of the interfaces within the temperature profile being generated.
 /// @param medium_ID The integer identifier of composite layer - 1.
-int InterfaceLocater(int medium_ID);
+int PlaneInterfaceLocater(int medium_ID);
 
 /// This subroutine is used to generate the temperature profile for a composite plane wall where heat transfer by conduction is occurring.
 /// @param numMediums Number of composite layers present.

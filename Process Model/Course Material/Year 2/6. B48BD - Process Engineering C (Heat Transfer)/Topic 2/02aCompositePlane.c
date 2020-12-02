@@ -53,7 +53,7 @@ void CompPlaneIntVariable(double *k, double *x)
 }
 
 /// MARK: GENERAL CALCULATIONS
-double ResistanceCalculation(double k, double A, double x)
+double PlaneResistanceCalculation(double k, double A, double x)
 {
     double R = 0.0;
     
@@ -63,7 +63,7 @@ double ResistanceCalculation(double k, double A, double x)
     return R;
 }
 
-double HeatCalculation(double R, double T1, double T2)
+double PlaneHeatCalculation(double R, double T1, double T2)
 {
     double Q = 0.0;
     
@@ -73,7 +73,7 @@ double HeatCalculation(double R, double T1, double T2)
     return Q;
 }
 
-double TempCalculation(double T1, double x, double k, double A, double Q)
+double PlaneTempCalculation(double T1, double x, double k, double A, double Q)
 {
     double T2 = 0.0;
     double sto = 0.0;
@@ -87,7 +87,7 @@ double TempCalculation(double T1, double x, double k, double A, double Q)
     return T2;
 }
 
-int InterfaceLocater(int medium_ID)
+int PlaneInterfaceLocater(int medium_ID)
 {
     return medium_ID*250;   // 250 elements per medium
 }
