@@ -114,8 +114,9 @@ int SphInterfaceLocater(int medium_ID)
 B48BDTemps CompSphCalculation(int numMediums, CondSphMedium data, double Q, double T1, int *rowsused)
 {
     B48BDTemps profile = {0.0};
-    int i = 0;
     double interval = 0.0;
+    
+    int i = 0;
     int count = 0;      // Counter for the number of rows generated.
     int rownum = 0;     // Variable used to deal with changing locations.
     
