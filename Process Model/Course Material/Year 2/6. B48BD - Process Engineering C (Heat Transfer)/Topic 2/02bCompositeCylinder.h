@@ -69,7 +69,7 @@ double CylTempCalculation(double T1, double R, double Q);
 /// @param medium_ID Composite layer identifier - 1.
 int CylInterfaceLocater(int medium_ID);
 
-/// This subroutine is used to generate the temperature profile for to show the rate of heat transfer within a cylindrical system.
+/// This subroutine is used to generate the temperature profile to show the rate of heat transfer within a cylindrical system.
 /// @param numMediums Number of composite layers.
 /// @param data Struct where the thermal properties of the composite layers is stored.
 /// @param Q Rate of heat transfer within the cylindrical system (W).
