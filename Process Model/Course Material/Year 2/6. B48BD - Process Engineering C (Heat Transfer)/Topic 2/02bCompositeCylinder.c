@@ -358,16 +358,15 @@ void CompositeCylinder(void)
     while(whilmain == 1)
     {
         //  Variable declaration
-            //  Subroutine behaviour (Delete me when done)
         char input[maxstrlen];
         int control = 0;
         int numMediums = 0;
         int rows = 0;
-            //  Subroutine output (Delete me when done)
+        
         double TotResist = 0.0;
         double Q = 0.0;
         B48BDTemps *profile = calloc(1, sizeof(B48BDTemps));
-            //  Subroutine input (Delete me when done)
+        
         double T1 = 0.0;
         double T2 = 0.0;
         double L = 0.0;
