@@ -104,7 +104,7 @@ void B48BDtopic2(){
                 CompositeSphere();
                 break;
             case '4':
-                //CompositePipe();
+                CompositePipe();
                 break;
             case '5':
                 //Lagging();
