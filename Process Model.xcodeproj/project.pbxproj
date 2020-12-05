@@ -81,6 +81,7 @@
 		E83C6CEA257568850018B6D8 /* 01dRadiation.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE3257568840018B6D8 /* 01dRadiation.c */; };
 		E85E98C02577E5460046DD63 /* 02aCompositePlane.c in Sources */ = {isa = PBXBuildFile; fileRef = E85E98BF2577E5460046DD63 /* 02aCompositePlane.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
+		E8974615257BC95E00C3DE51 /* 02dCompositePipe.c in Sources */ = {isa = PBXBuildFile; fileRef = E8974614257BC95E00C3DE51 /* 02dCompositePipe.c */; };
 		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
 		E8F2D1F325781B72000A01A5 /* 02bCompositeCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F225781B72000A01A5 /* 02bCompositeCylinder.c */; };
 		E8F2D1F825783CDC000A01A5 /* 02cCompositeSphere.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F2D1F725783CDC000A01A5 /* 02cCompositeSphere.c */; };
@@ -254,6 +255,8 @@
 		E85E98BF2577E5460046DD63 /* 02aCompositePlane.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 02aCompositePlane.c; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E8974613257BC95E00C3DE51 /* 02dCompositePipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 02dCompositePipe.h; sourceTree = "<group>"; };
+		E8974614257BC95E00C3DE51 /* 02dCompositePipe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 02dCompositePipe.c; sourceTree = "<group>"; };
 		E899817B25740B9C00D154D6 /* B48BD.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = B48BD.c; sourceTree = "<group>"; };
 		E899817F25740CD700D154D6 /* B48BDMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BDMenu.h; sourceTree = "<group>"; };
 		E899818125740D8C00D154D6 /* B48BD_T1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T1.h; sourceTree = "<group>"; };
@@ -613,6 +616,8 @@
 				E8F2D1F125781B72000A01A5 /* 02bCompositeCylinder.h */,
 				E8F2D1F725783CDC000A01A5 /* 02cCompositeSphere.c */,
 				E8F2D1F625783CDC000A01A5 /* 02cCompositeSphere.h */,
+				E8974614257BC95E00C3DE51 /* 02dCompositePipe.c */,
+				E8974613257BC95E00C3DE51 /* 02dCompositePipe.h */,
 				E85E98BD2576E6E30046DD63 /* B48BD_T2.h */,
 			);
 			path = "Topic 2";
@@ -800,6 +805,7 @@
 				E82057CB256ADEE800DA25F0 /* 01eAdiabatic.c in Sources */,
 				E82057EB256ADEE800DA25F0 /* Year1.c in Sources */,
 				E8F2D1F325781B72000A01A5 /* 02bCompositeCylinder.c in Sources */,
+				E8974615257BC95E00C3DE51 /* 02dCompositePipe.c in Sources */,
 				E82057BD256ADEE800DA25F0 /* Year3.c in Sources */,
 				E82057E6256ADEE800DA25F0 /* 01fCapp.c in Sources */,
 				E82057D8256ADEE800DA25F0 /* 03dThreeK.c in Sources */,
