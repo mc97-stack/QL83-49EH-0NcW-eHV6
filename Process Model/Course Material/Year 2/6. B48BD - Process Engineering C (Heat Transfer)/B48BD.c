@@ -90,21 +90,21 @@ void B48BDtopic2(){
         //printf("5. Optimal lagging thickness.\n\n");
         
         printf("q. Exit topic.\n");
-        printf("Selection [1 - 5]: ");
+        printf("Selection [1 - 4]: ");
         fgets(input, sizeof(input), stdin);
         switch(input[0])
         {
             case '1':
-                CompositePlane();
+                //CompositePlane();
                 break;
             case '2':
-                CompositeCylinder();
+                //CompositeCylinder();
                 break;
             case '3':
-                CompositeSphere();
+                //CompositeSphere();
                 break;
             case '4':
-                CompositePipe();
+                //CompositePipe();
                 break;
             case '5':
                 //Lagging();
