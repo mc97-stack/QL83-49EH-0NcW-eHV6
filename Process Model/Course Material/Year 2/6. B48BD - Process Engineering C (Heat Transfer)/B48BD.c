@@ -98,13 +98,13 @@ void B48BDtopic2(){
                 CompositePlane();
                 break;
             case '2':
-                //CompositeCylinder();
+                CompositeCylinder();
                 break;
             case '3':
-                //CompositeSphere();
+                CompositeSphere();
                 break;
             case '4':
-                //CompositePipe();
+                CompositePipe();
                 break;
             case '5':
                 //Lagging();
