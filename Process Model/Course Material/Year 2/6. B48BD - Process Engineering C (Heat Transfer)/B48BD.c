@@ -95,7 +95,7 @@ void B48BDtopic2(){
         switch(input[0])
         {
             case '1':
-                //CompositePlane();
+                CompositePlane();
                 break;
             case '2':
                 //CompositeCylinder();
