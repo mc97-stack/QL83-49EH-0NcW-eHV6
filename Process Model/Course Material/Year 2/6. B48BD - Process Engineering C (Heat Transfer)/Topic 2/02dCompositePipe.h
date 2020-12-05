@@ -58,7 +58,7 @@ typedef struct TempProfile{
     double T[5000];     // Temperature at cylinder radius (K).
 } TempProfile;
 
-/// This subroutine is used to calculatethe resistance to heat transfer in a system where convection is the main mode of heat transfer. This is calculated by assuming that the thermal boundary layer is negligibly thin.
+/// This subroutine is used to calculate the resistance to heat transfer in a system where convection is the main mode of heat transfer. This is calculated by assuming that the thermal boundary layer is negligibly thin.
 /// @param h Fluid heat transfer coefficient (W/m2.K).
 /// @param r Radius of convective layer (m).
 double ConvResistanceCalculation(double h, double r);
