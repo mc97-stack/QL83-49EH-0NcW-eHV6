@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>0F83D9C6-FD90-475F-BEFE-06236D39ACBD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0F83D9C6-FD90-475F-BEFE-06236D39ACBD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628873372.67570305</real>
+			<key>timeStoppedRecording</key>
+			<real>628873432.96289206</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>0F83D9C6-FD90-475F-BEFE-06236D39ACBD</string>
+		</dict>
+		<key>22B8B227-6740-47AA-B09B-FFD5480D0F86</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>22B8B227-6740-47AA-B09B-FFD5480D0F86.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628704239.67226899</real>
+			<key>timeStoppedRecording</key>
+			<real>628704421.38841295</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>22B8B227-6740-47AA-B09B-FFD5480D0F86</string>
+		</dict>
+		<key>3DB34107-80B6-4C35-9699-09B2890E774E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3DB34107-80B6-4C35-9699-09B2890E774E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628702637.19292796</real>
+			<key>timeStoppedRecording</key>
+			<real>628702758.77598703</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>3DB34107-80B6-4C35-9699-09B2890E774E</string>
+		</dict>
+		<key>535D68B1-4009-4F84-BE15-6C5D88070610</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>535D68B1-4009-4F84-BE15-6C5D88070610.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628875241.21630299</real>
+			<key>timeStoppedRecording</key>
+			<real>628875322.203475</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>535D68B1-4009-4F84-BE15-6C5D88070610</string>
+		</dict>
+		<key>56846BA7-1FDF-49F8-A6C2-1E671B150DF6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>56846BA7-1FDF-49F8-A6C2-1E671B150DF6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628873723.36004698</real>
+			<key>timeStoppedRecording</key>
+			<real>628873726.847736</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>56846BA7-1FDF-49F8-A6C2-1E671B150DF6</string>
+		</dict>
+		<key>6D942544-DB2F-44B5-BF69-CA1243B3780B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6D942544-DB2F-44B5-BF69-CA1243B3780B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628876136.59207904</real>
+			<key>timeStoppedRecording</key>
+			<real>628876396.92013299</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>6D942544-DB2F-44B5-BF69-CA1243B3780B</string>
+		</dict>
+		<key>6EB377BC-F062-46B2-9FC0-9DF7F3B1B4FA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6EB377BC-F062-46B2-9FC0-9DF7F3B1B4FA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628637712.71832502</real>
+			<key>timeStoppedRecording</key>
+			<real>628637913.29011798</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>6EB377BC-F062-46B2-9FC0-9DF7F3B1B4FA</string>
+		</dict>
+		<key>755EB462-82F1-4199-AF90-72B40E071890</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>755EB462-82F1-4199-AF90-72B40E071890.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628702267.15199494</real>
+			<key>timeStoppedRecording</key>
+			<real>628702504.59202504</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>755EB462-82F1-4199-AF90-72B40E071890</string>
+		</dict>
+		<key>86A296A7-FDEA-4D5D-B4E1-C92E81505B00</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>86A296A7-FDEA-4D5D-B4E1-C92E81505B00.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628876785.45339203</real>
+			<key>timeStoppedRecording</key>
+			<real>628876892.71324694</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>86A296A7-FDEA-4D5D-B4E1-C92E81505B00</string>
+		</dict>
+		<key>986AD548-AEC7-4A5C-84A2-832F0D90A583</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>986AD548-AEC7-4A5C-84A2-832F0D90A583.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628873824.34733403</real>
+			<key>timeStoppedRecording</key>
+			<real>628873881.79483604</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>986AD548-AEC7-4A5C-84A2-832F0D90A583</string>
+		</dict>
+		<key>A7D334F9-8BA7-45B4-A5B8-A8B122E15491</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A7D334F9-8BA7-45B4-A5B8-A8B122E15491.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628703952.60409999</real>
+			<key>timeStoppedRecording</key>
+			<real>628704018.93308794</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>A7D334F9-8BA7-45B4-A5B8-A8B122E15491</string>
+		</dict>
+		<key>A89AFE54-D180-4537-80F2-7DF2F84AD194</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A89AFE54-D180-4537-80F2-7DF2F84AD194.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628876749.54882205</real>
+			<key>timeStoppedRecording</key>
+			<real>628876775.079162</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>A89AFE54-D180-4537-80F2-7DF2F84AD194</string>
+		</dict>
+		<key>B77C8CF9-6F45-4469-A7B8-D46175443C30</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B77C8CF9-6F45-4469-A7B8-D46175443C30.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628704422.10908198</real>
+			<key>timeStoppedRecording</key>
+			<real>628704488.44284904</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>B77C8CF9-6F45-4469-A7B8-D46175443C30</string>
+		</dict>
+		<key>BDAD06A4-507D-48F3-B293-77E2B71B4A4B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BDAD06A4-507D-48F3-B293-77E2B71B4A4B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628702822.748191</real>
+			<key>timeStoppedRecording</key>
+			<real>628702915.58757102</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>BDAD06A4-507D-48F3-B293-77E2B71B4A4B</string>
+		</dict>
+		<key>CC893336-E1AA-4724-8906-E632A6FAB0FD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CC893336-E1AA-4724-8906-E632A6FAB0FD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628876463.47539103</real>
+			<key>timeStoppedRecording</key>
+			<real>628876719.10110104</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>CC893336-E1AA-4724-8906-E632A6FAB0FD</string>
+		</dict>
+		<key>D185317E-C621-4B05-B0AE-D6445E4F5DF0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D185317E-C621-4B05-B0AE-D6445E4F5DF0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628704500.41014397</real>
+			<key>timeStoppedRecording</key>
+			<real>628704606.54352295</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>D185317E-C621-4B05-B0AE-D6445E4F5DF0</string>
+		</dict>
+		<key>D6ACCEDC-5480-4A22-8F4D-2075DC20D00B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D6ACCEDC-5480-4A22-8F4D-2075DC20D00B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628705694.35228598</real>
+			<key>timeStoppedRecording</key>
+			<real>628705763.16819096</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>D6ACCEDC-5480-4A22-8F4D-2075DC20D00B</string>
+		</dict>
+		<key>FA456121-8D14-4993-8E08-8FFA92B5D092</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FA456121-8D14-4993-8E08-8FFA92B5D092.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628873171.837304</real>
+			<key>timeStoppedRecording</key>
+			<real>628873197.25009203</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>FA456121-8D14-4993-8E08-8FFA92B5D092</string>
+		</dict>
+		<key>FC6DD1C2-F848-475C-BF4E-3270CBD3DDEB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FC6DD1C2-F848-475C-BF4E-3270CBD3DDEB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Process Model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Process Model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Process Model</string>
+			<key>timeStartedRecording</key>
+			<real>628705798.10722995</real>
+			<key>timeStoppedRecording</key>
+			<real>628705872.41760802</real>
+			<key>title</key>
+			<string>Run Process Model</string>
+			<key>uniqueIdentifier</key>
+			<string>FC6DD1C2-F848-475C-BF4E-3270CBD3DDEB</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

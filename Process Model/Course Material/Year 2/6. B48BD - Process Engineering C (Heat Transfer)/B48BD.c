@@ -87,7 +87,7 @@ void B48BDtopic2(){
         printf("2. Composite cylinder.\n");
         printf("3. Composite sphere.\n");
         printf("4. Composite cylinder (fluid flow).\n");
-        printf("5. Optimal lagging thickness.\n\n");
+        //printf("5. Optimal lagging thickness.\n\n");
         
         printf("q. Exit topic.\n");
         printf("Selection [1 - 5]: ");
