@@ -45,7 +45,4 @@ void CompositeSphere(void);
 /// This subroutine is used to guide the user through calculating the interface temperature through a composite cylinder applied to fluid flow.
 void CompositePipe(void);
 
-/// This subroutine is used to guide the user through finding the optimal lagging thickness using the composite cylinder calculations.
-void Lagging(void);
-
 #endif /* B48BD_T2_h */

@@ -28,6 +28,7 @@
 #include "B48BDMenu.h"
 #include "B48BD_T1.h"
 #include "B48BD_T2.h"
+#include "B48BD_T3.h"
 
 #define maxstrlen 128
 
@@ -87,7 +88,6 @@ void B48BDtopic2(){
         printf("2. Composite cylinder.\n");
         printf("3. Composite sphere.\n");
         printf("4. Composite cylinder (fluid flow).\n");
-        //printf("5. Optimal lagging thickness.\n\n");
         
         printf("q. Exit topic.\n");
         printf("Selection [1 - 4]: ");
@@ -106,9 +106,6 @@ void B48BDtopic2(){
             case '4':
                 CompositePipe();
                 break;
-            case '5':
-                //Lagging();
-                break;
             case '0':
             case 'Q':
             case 'q':
@@ -122,13 +119,40 @@ void B48BDtopic2(){
 }
 
 void B48BDtopic3(){
-    //char input[maxstrlen];
+    char input[maxstrlen];
     int control = 0;
     
     control = 1;
     while(control == 1){
         B48BDTopComm();
-        control = 0;
+        printf("1. Lagging thickness.\n");
+        printf("2. Film heat transfer coefficient.\n");
+        printf("3. Monochromatic emissive power (Planck's distribution law).\n");
+        
+        printf("q. Exit topic.\n");
+        printf("Selection [1 - 3]: ");
+        fgets(input, sizeof(input), stdin);
+        switch(input[0])
+        {
+            case '1':
+                Lagging();
+                break;
+            case '2':
+                FilmHTCoefficient();
+                break;
+            case '3':
+                RadWavelength();
+                break;
+            case '4':
+            case '0':
+            case 'Q':
+            case 'q':
+                control = 0;
+                break;
+            default:
+                printf("Input not recognised. Please enter an integer value between 1 and 4.\n");
+                break;
+        }
     }
 }
 
