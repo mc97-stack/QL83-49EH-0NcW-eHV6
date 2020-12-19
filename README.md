@@ -6,12 +6,17 @@ GitHub username: "mc97-stack".
 GitHub Repository URL: "https://github.com/mc97-stack/QL83-49EH-0NcW-eHV6.git".
 
 Development status: Under development (Research).
+
 Repository visibility status: Public.
 
 Features currently available:
 - Topics 1 - 4 of B48BB (Process Engineering A (Fluid Statics and Dynamics))
 - Topics 1 - 6 of B48BC (Process Engineering B (Thermodynamic Processes))
-- Topic 1 of B48BD (Process Engineering C (Heat Transfer))
+- Topics 1 - 2 of B48BD (Process Engineering C (Heat Transfer))
+
+N.B. It should now, hopefully, be obvious the need for physical properties estimation methods within this program. The author has thus deided that before proceeding further with any feature, topic 3 of B48BD will be written before a notable break away from posting commits as regularly as can be seen on the user profile to focus on the theory and estimation methods for physical properties. The main source for this will be The Properties of Gases and Liquid (5th Edition) - B. E. Poling, J. P. O'Connell and J. Prausnitz and the NIST webbook. Chemical Engineering design (5th Edition) by R. Sinnott and G. Towler, Perry's Chemical Engineering Handbook (8th Edition) and Albright's Chemical Engineering Handbook (1st edition) will also be consulted for general correlations used as standard by process engineers and provide a reference dataset to validate the claims made by Poling, O'Connell and Prausnitz. The author hopes that the forthcoming period of silence is recognised as a significant workload for an individual.
+
+N.B. The author is well aware of typo's, grammatical and reading errors in addition to hyperlink errors within the attached documentation. Whilst the internal hyperlink issue is an error made by TexStudio, the author will strive to ensure that the typo's, grammatical and reading errors are corrected in the next update which will cover thermal lagging calculations, film heat transfer coefficient estimation and production of the spectral radiance graph for a perfect blackbody.
 
 ##  MacOS Install (Using Xcode 11.6 or later)
 1.  On the "Welcome" window, click "Clone an Existing Project".
