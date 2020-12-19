@@ -18,6 +18,8 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //  
 
+#include "B48BD_T2.h"
+
 #ifndef _2bCompositeCylinderVariable_h
 #define _2bCompositeCylinderVariable_h
 
