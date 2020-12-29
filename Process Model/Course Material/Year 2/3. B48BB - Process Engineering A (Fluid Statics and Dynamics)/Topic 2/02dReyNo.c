@@ -29,6 +29,7 @@
 
 //  Custom header files
 #include "System.h"
+#include "DimensionlessNum.h"
 #include "B48BB_T2.h"
 #include "02dReyNo.h"
 
@@ -47,18 +48,6 @@ void ReyNoVariable(double *rho, double *u, double *d, double *mu)
     
     *mu = inputDouble(0, 0, "fluid viscosity", "cP");
     *mu = (*mu)*0.001; //Conversion (cP to Pa.s)
-}
-
-/// MARK: GENERAL CALCULATION
-double ReyNoCalculation(double rho, double u, double d, double mu)
-{
-    double ReyNum = 0.0;
-    
-    ReyNum = rho * u;
-    ReyNum = (ReyNum)*d;
-    ReyNum = (ReyNum)/mu;
-    
-    return ReyNum;
 }
 
 /// MARK: DISPLAY AND WRITE
@@ -234,7 +223,7 @@ void ReynoldsNumber()
         clock_getres(CLOCK_MONOTONIC, &start);
         clock_gettime(CLOCK_MONOTONIC, &start);
         
-        ReyNum = ReyNoCalculation(rho, u, d, mu);
+        ReyNum = ReynoldsNum(rho, u, d, mu);
         
         clock_getres(CLOCK_MONOTONIC, &end);
         clock_gettime(CLOCK_MONOTONIC, &end);

@@ -29,7 +29,7 @@
 
 //  Custom header files
 #include "System.h"
-#include "02dReyNo.h"
+#include "DimensionlessNum.h"
 #include "03dTwoK.h"
 
 /// MARK: SUBROUTINE DEFINITIONS
@@ -268,7 +268,7 @@ double TwoKCalculatePLoss(double h, double rho)
 TwoKFittings TwoKFinalTable(TwoKFittings data, double rho, double u, double d, double mu, double Impd, double *Re)
 {
     double ReyNum = 0.0;
-    *Re = ReyNoCalculation(rho, u, d, mu);
+    *Re = ReynoldsNum(rho, u, d, mu);
     
     ReyNum = (*Re);
     

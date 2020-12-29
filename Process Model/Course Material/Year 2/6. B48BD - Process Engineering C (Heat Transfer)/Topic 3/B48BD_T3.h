@@ -12,7 +12,7 @@
 void Lagging(void);
 
 /// This subroutine is used to guide the user through calculating the film heat transfer coefficient using correlations that are representative of difference heat transfer applications.
-void FilmHTCoefficient(void);
+void FluidHTCoefficient(void);
 
 /// This subroutine is used to guide the user through generating the graph for the black-body spectral radiance using Planck's distribution law.
 void RadWavelength(void);

@@ -75,12 +75,19 @@
 		E82057FF256D140E00DA25F0 /* ThermophysicalProperties.c in Sources */ = {isa = PBXBuildFile; fileRef = E82057FE256D140E00DA25F0 /* ThermophysicalProperties.c */; };
 		E8205803256D146700DA25F0 /* Reading.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205802256D146700DA25F0 /* Reading.c */; };
 		E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */ = {isa = PBXBuildFile; fileRef = E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */; };
-		E82CCE5525810A0E00F71960 /* 03aLagging.c in Sources */ = {isa = PBXBuildFile; fileRef = E82CCE5425810A0E00F71960 /* 03aLagging.c */; };
+		E82E4DDE2593C6C900950FC7 /* 03cRadWavelength.c in Sources */ = {isa = PBXBuildFile; fileRef = E82E4DDD2593C6C900950FC7 /* 03cRadWavelength.c */; };
 		E83C6CE7257568850018B6D8 /* 01aTemperatureConversion.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CDF257568830018B6D8 /* 01aTemperatureConversion.c */; };
 		E83C6CE8257568850018B6D8 /* 01bConduction.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE0257568830018B6D8 /* 01bConduction.c */; };
 		E83C6CE9257568850018B6D8 /* 01cConvection.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE2257568840018B6D8 /* 01cConvection.c */; };
 		E83C6CEA257568850018B6D8 /* 01dRadiation.c in Sources */ = {isa = PBXBuildFile; fileRef = E83C6CE3257568840018B6D8 /* 01dRadiation.c */; };
 		E86E6CAD256ACE9D004B9493 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E6CAC256ACE9D004B9493 /* main.c */; };
+		E8885721258E4ACB00FEC2D4 /* 03aLagging.c in Sources */ = {isa = PBXBuildFile; fileRef = E8885720258E4ACB00FEC2D4 /* 03aLagging.c */; };
+		E8885726258E517E00FEC2D4 /* 03bFilmHTCoefficient.c in Sources */ = {isa = PBXBuildFile; fileRef = E8885725258E517E00FEC2D4 /* 03bFilmHTCoefficient.c */; };
+		E888572A258E56D200FEC2D4 /* DimensionlessNum.c in Sources */ = {isa = PBXBuildFile; fileRef = E8885729258E56D200FEC2D4 /* DimensionlessNum.c */; };
+		E888572E258E697300FEC2D4 /* 03bNaturalConvection.c in Sources */ = {isa = PBXBuildFile; fileRef = E888572D258E697300FEC2D4 /* 03bNaturalConvection.c */; };
+		E8885732258E699100FEC2D4 /* 03bForcedFlatPlate.c in Sources */ = {isa = PBXBuildFile; fileRef = E8885731258E699100FEC2D4 /* 03bForcedFlatPlate.c */; };
+		E8885735258E69B400FEC2D4 /* 03bInsideCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8885734258E69B400FEC2D4 /* 03bInsideCylinder.c */; };
+		E8885738258E69DD00FEC2D4 /* 03bOutsideCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8885737258E69DD00FEC2D4 /* 03bOutsideCylinder.c */; };
 		E899817C25740B9C00D154D6 /* B48BD.c in Sources */ = {isa = PBXBuildFile; fileRef = E899817B25740B9C00D154D6 /* B48BD.c */; };
 		E8B87F93257BF8A500FF5077 /* 02bCompositeCylinder.c in Sources */ = {isa = PBXBuildFile; fileRef = E8B87F91257BF8A400FF5077 /* 02bCompositeCylinder.c */; };
 		E8B87F97257BF8E800FF5077 /* 02cCompositeSphere.c in Sources */ = {isa = PBXBuildFile; fileRef = E8B87F95257BF8E800FF5077 /* 02cCompositeSphere.c */; };
@@ -244,8 +251,8 @@
 		E8205807256D1B1200DA25F0 /* 05aEntropyBalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 05aEntropyBalance.h; sourceTree = "<group>"; };
 		E8205808256D1B1200DA25F0 /* 05aEntropyBalance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 05aEntropyBalance.c; sourceTree = "<group>"; };
 		E82CCE522581040000F71960 /* B48BD_T3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T3.h; sourceTree = "<group>"; };
-		E82CCE5325810A0E00F71960 /* 03aLagging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 03aLagging.h; sourceTree = "<group>"; };
-		E82CCE5425810A0E00F71960 /* 03aLagging.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03aLagging.c; sourceTree = "<group>"; };
+		E82E4DDC2593C6C900950FC7 /* 03cRadWavelength.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 03cRadWavelength.h; sourceTree = "<group>"; };
+		E82E4DDD2593C6C900950FC7 /* 03cRadWavelength.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03cRadWavelength.c; sourceTree = "<group>"; };
 		E83C6CDF257568830018B6D8 /* 01aTemperatureConversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 01aTemperatureConversion.c; sourceTree = "<group>"; };
 		E83C6CE0257568830018B6D8 /* 01bConduction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 01bConduction.c; sourceTree = "<group>"; };
 		E83C6CE1257568830018B6D8 /* 01dRadiation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 01dRadiation.h; sourceTree = "<group>"; };
@@ -257,6 +264,16 @@
 		E85E98BD2576E6E30046DD63 /* B48BD_T2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T2.h; sourceTree = "<group>"; };
 		E86E6CA9256ACE9D004B9493 /* Process Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Process Model"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86E6CAC256ACE9D004B9493 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E888571F258E4ACB00FEC2D4 /* 03aLagging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 03aLagging.h; sourceTree = "<group>"; };
+		E8885720258E4ACB00FEC2D4 /* 03aLagging.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03aLagging.c; sourceTree = "<group>"; };
+		E8885724258E517E00FEC2D4 /* 03bFilmHTCoefficient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 03bFilmHTCoefficient.h; sourceTree = "<group>"; };
+		E8885725258E517E00FEC2D4 /* 03bFilmHTCoefficient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03bFilmHTCoefficient.c; sourceTree = "<group>"; };
+		E8885728258E56D200FEC2D4 /* DimensionlessNum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DimensionlessNum.h; sourceTree = "<group>"; };
+		E8885729258E56D200FEC2D4 /* DimensionlessNum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DimensionlessNum.c; sourceTree = "<group>"; };
+		E888572D258E697300FEC2D4 /* 03bNaturalConvection.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03bNaturalConvection.c; sourceTree = "<group>"; };
+		E8885731258E699100FEC2D4 /* 03bForcedFlatPlate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03bForcedFlatPlate.c; sourceTree = "<group>"; };
+		E8885734258E69B400FEC2D4 /* 03bInsideCylinder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03bInsideCylinder.c; sourceTree = "<group>"; };
+		E8885737258E69DD00FEC2D4 /* 03bOutsideCylinder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 03bOutsideCylinder.c; sourceTree = "<group>"; };
 		E899817B25740B9C00D154D6 /* B48BD.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = B48BD.c; sourceTree = "<group>"; };
 		E899817F25740CD700D154D6 /* B48BDMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BDMenu.h; sourceTree = "<group>"; };
 		E899818125740D8C00D154D6 /* B48BD_T1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = B48BD_T1.h; sourceTree = "<group>"; };
@@ -348,6 +365,8 @@
 		E8205738256ADEE700DA25F0 /* Common subroutines */ = {
 			isa = PBXGroup;
 			children = (
+				E8885729258E56D200FEC2D4 /* DimensionlessNum.c */,
+				E8885728258E56D200FEC2D4 /* DimensionlessNum.h */,
 				E8205739256ADEE700DA25F0 /* IdealGasLaw.c */,
 				E820573B256ADEE700DA25F0 /* IdealGasLaw.h */,
 				E820573A256ADEE700DA25F0 /* System.c */,
@@ -614,9 +633,17 @@
 		E82CCE512581030900F71960 /* Topic 3 */ = {
 			isa = PBXGroup;
 			children = (
+				E8885720258E4ACB00FEC2D4 /* 03aLagging.c */,
+				E888571F258E4ACB00FEC2D4 /* 03aLagging.h */,
+				E8885725258E517E00FEC2D4 /* 03bFilmHTCoefficient.c */,
+				E8885724258E517E00FEC2D4 /* 03bFilmHTCoefficient.h */,
+				E8885731258E699100FEC2D4 /* 03bForcedFlatPlate.c */,
+				E8885734258E69B400FEC2D4 /* 03bInsideCylinder.c */,
+				E888572D258E697300FEC2D4 /* 03bNaturalConvection.c */,
+				E8885737258E69DD00FEC2D4 /* 03bOutsideCylinder.c */,
+				E82E4DDD2593C6C900950FC7 /* 03cRadWavelength.c */,
+				E82E4DDC2593C6C900950FC7 /* 03cRadWavelength.h */,
 				E82CCE522581040000F71960 /* B48BD_T3.h */,
-				E82CCE5325810A0E00F71960 /* 03aLagging.h */,
-				E82CCE5425810A0E00F71960 /* 03aLagging.c */,
 			);
 			path = "Topic 3";
 			sourceTree = "<group>";
@@ -758,6 +785,7 @@
 				E82057E8256ADEE800DA25F0 /* 01aFluComp.c in Sources */,
 				E82057C5256ADEE800DA25F0 /* 02aCompressor.c in Sources */,
 				E8205809256D1B1200DA25F0 /* 05aEntropyBalance.c in Sources */,
+				E8885735258E69B400FEC2D4 /* 03bInsideCylinder.c in Sources */,
 				E82057C2256ADEE800DA25F0 /* 04cCarnotCycle.c in Sources */,
 				E82057E5256ADEE800DA25F0 /* 01eBubPres.c in Sources */,
 				E899817C25740B9C00D154D6 /* B48BD.c in Sources */,
@@ -765,6 +793,7 @@
 				E8FF0B09257BF58B00133B8A /* 02aCompositePlane.c in Sources */,
 				E82057E7256ADEE800DA25F0 /* 01cMano.c in Sources */,
 				E8B87F97257BF8E800FF5077 /* 02cCompositeSphere.c in Sources */,
+				E8885726258E517E00FEC2D4 /* 03bFilmHTCoefficient.c in Sources */,
 				E82057D6256ADEE800DA25F0 /* 03gRotameter.c in Sources */,
 				E82057E1256ADEE800DA25F0 /* 02gLamVelPro.c in Sources */,
 				E82057D7256ADEE800DA25F0 /* 03cHydrDiam.c in Sources */,
@@ -792,11 +821,13 @@
 				E82057B5256ADEE800DA25F0 /* 02VirialEOS.c in Sources */,
 				E82057DE256ADEE800DA25F0 /* 02gTurVelPro.c in Sources */,
 				E82057DA256ADEE800DA25F0 /* 04bPumpSizing.c in Sources */,
+				E8885732258E699100FEC2D4 /* 03bForcedFlatPlate.c in Sources */,
 				E82057C4256ADEE800DA25F0 /* 04dClausiusInequality.c in Sources */,
 				E8010C6E2571586900697DB6 /* 06dIdealReactionComposition.c in Sources */,
 				E82057B2256ADEE800DA25F0 /* License.c in Sources */,
+				E888572A258E56D200FEC2D4 /* DimensionlessNum.c in Sources */,
 				E82057E9256ADEE800DA25F0 /* 01dSurfTens.c in Sources */,
-				E82CCE5525810A0E00F71960 /* 03aLagging.c in Sources */,
+				E8885721258E4ACB00FEC2D4 /* 03aLagging.c in Sources */,
 				E8010C692570024000697DB6 /* 06cEquilibriumConstant.c in Sources */,
 				E82057CD256ADEE800DA25F0 /* 01bIsothermal.c in Sources */,
 				E82057C6256ADEE800DA25F0 /* 02cOpenFirstLaw.c in Sources */,
@@ -808,12 +839,14 @@
 				E82057C0256ADEE800DA25F0 /* 03bMultistageCompressor.c in Sources */,
 				E82057BF256ADEE800DA25F0 /* 03cMultistageEstimation.c in Sources */,
 				E82057CA256ADEE800DA25F0 /* 01aPolytropic.c in Sources */,
+				E82E4DDE2593C6C900950FC7 /* 03cRadWavelength.c in Sources */,
 				E82057B8256ADEE800DA25F0 /* 01aAcentricFactor.c in Sources */,
 				E82057E3256ADEE800DA25F0 /* 02g0VelProfileMenu.c in Sources */,
 				E83C6CEA257568850018B6D8 /* 01dRadiation.c in Sources */,
 				E82057B7256ADEE800DA25F0 /* 02PVTRelations.c in Sources */,
 				E82057C1256ADEE800DA25F0 /* 04aThermalEfficiency.c in Sources */,
 				E82057DF256ADEE800DA25F0 /* 02dReyNo.c in Sources */,
+				E888572E258E697300FEC2D4 /* 03bNaturalConvection.c in Sources */,
 				E8010C64256FB4DF00697DB6 /* 06bEquilibriumConversion.c in Sources */,
 				E82057CE256ADEE800DA25F0 /* Year2.c in Sources */,
 				E82057CF256ADEE800DA25F0 /* 03aFrictFactor.c in Sources */,
@@ -826,6 +859,7 @@
 				E82057E6256ADEE800DA25F0 /* 01fCapp.c in Sources */,
 				E82057D8256ADEE800DA25F0 /* 03dThreeK.c in Sources */,
 				E82057EA256ADEE800DA25F0 /* B48BB.c in Sources */,
+				E8885738258E69DD00FEC2D4 /* 03bOutsideCylinder.c in Sources */,
 				E82057D0256ADEE800DA25F0 /* 03d1Fittings.c in Sources */,
 				E8205803256D146700DA25F0 /* Reading.c in Sources */,
 				E82057FF256D140E00DA25F0 /* ThermophysicalProperties.c in Sources */,

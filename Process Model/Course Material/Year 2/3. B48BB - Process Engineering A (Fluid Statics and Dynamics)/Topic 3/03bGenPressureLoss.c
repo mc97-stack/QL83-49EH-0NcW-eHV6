@@ -29,9 +29,9 @@
 
 //  Custom Header Files
 #include "System.h"
+#include "DimensionlessNum.h"
 #include "B48BB_T3.h"
 #include "03bGenPressureLoss.h"
-#include "02dReyNo.h"
 #include "03aFrictFactor.h"
 
 /// MARK: SUBROUTINE DEFINITIONS
@@ -52,7 +52,7 @@ void PressLossVariable(double *rho, double *u, double *d, double *mu, double *L,
     
     *L = inputDouble(0, 0, "pipe length", "m");
     
-    if(ReyNoCalculation(*rho, *u, *d, *mu) > 2500){
+    if(ReynoldsNum(*rho, *u, *d, *mu) > 2500){
         *vareps = inputDouble(0, 0, "pipe absolute roughness", "mm");
         *vareps = (*vareps) * 0.001;
     }else{ 
@@ -75,7 +75,7 @@ double phiCalculation(double rho, double u, double d, double mu, double vareps)
     
     int roughcheck = 0;
     
-    ReyNum = ReyNoCalculation(rho, u, d, mu);
+    ReyNum = ReynoldsNum(rho, u, d, mu);
     
     if(ReyNum < 2000){
         phi = Laminar(rho, u, d, mu);

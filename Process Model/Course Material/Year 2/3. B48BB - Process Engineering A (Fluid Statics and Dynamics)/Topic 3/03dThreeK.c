@@ -29,8 +29,8 @@
 
 //  Custom header files
 #include "System.h"
+#include "DimensionlessNum.h"
 #include "03dThreeK.h"
-#include "02dReyNo.h"
 
 /// MARK: SUBROUTINE DEFINITIONS
 #define maxstrlen 128
@@ -376,7 +376,7 @@ ThreeKFittings ThreeKFinalTable(ThreeKFittings data, double rho, double u, doubl
 {
     double ReyNo = 0.0;
     
-    *Re = ReyNoCalculation(rho, u, d, mu);
+    *Re = ReynoldsNum(rho, u, d, mu);
     ReyNo = (*Re);
     
     for(int i = 0; i < 34; ++i)

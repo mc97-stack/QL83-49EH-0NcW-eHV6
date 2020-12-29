@@ -31,18 +31,6 @@ void ReyNoVariable(double *rho, double *u, double *d, double *mu);
 
 #endif /* ReyNoVar_h */
 
-#ifndef ReyNoCalc_h
-#define ReyNoCalc_h
-
-/// This subroutine is used to calculate the Reynolds number.
-/// @param rho Fluid density (kg/m3).
-/// @param u Fluid velocity (m/s).
-/// @param d Pipe diameter (m).
-/// @param mu Fluid viscosity (Pa.s).
-double ReyNoCalculation(double rho, double u, double d, double mu);
-
-#endif /* ReyNoCalc_h */
-
 #ifndef ReyNoDisp_h
 #define ReyNoDisp_h
 
