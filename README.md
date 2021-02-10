@@ -1,3 +1,5 @@
+Update (10/02): To accommodate for planned growth as this program develops, I am stepping back from building this repository to build a separate Maths and Physical Properties libraries, intended to be accessed by this program to aid in integrating an object-oriented approach. These separate libraries are currently planned to be separate repositories which will be a dependency of this program in order to function and will be hyperlinked within this readme file at the time that they are made.
+
 # Process Model
 A cross-platform command-line program written in the C programming language made to perform the computations required for the design, simulation and fabrication of standard industrial process equipment. The program can either present the calculated data either in console or exporting to a tab-delineated text file suitable for import into Microsoft Excel.
 
